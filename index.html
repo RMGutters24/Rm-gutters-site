@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RM Gutters – Veteran Owned Gutter Cleaning in Abilene, TX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="RM Gutters is a veteran-owned gutter cleaning and repair company serving Abilene, TX and surrounding areas." />
+  <style>
+    :root {
+      --primary: #00b8b8;  /* turquoise */
+      --dark: #050505;
+      --light: #ffffff;
+      --gray: #f3f5f7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(to bottom, #000000, #050505);
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #111;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      font-size: 0.95rem;
+    }
+
+    nav li a {
+      color: var(--light);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    nav li a:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .hero {
+      padding: 60px 24px 40px;
+      background: radial-gradient(circle at top left, #006b6b, #000000);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .hero h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 20px;
+      border: 1px solid var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .hero-card {
+      flex: 1 1 260px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+      padding: 18px;
+      border: 1px solid #111;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .hero-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .hero-card li::before {
+      content: "✓";
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    main {
+      background: #050505;
+    }
+
+    section {
+      padding: 40px 24px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+      color: var(--primary);
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .two-col > div {
+      flex: 1 1 280px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border-radius: 8px;
+      padding: 16px;
+      background: #0b0b0b;
+      border: 1px solid #131313;
+    }
+
+    .card h3 {
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .pricing-note {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #cccccc;
+    }
+
+    .list-dash {
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    .list-dash li::before {
+      content: "— ";
+      color: var(--primary);
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .contact-info {
+      flex: 1 1 260px;
+    }
+
+    .contact-form {
+      flex: 1 1 260px;
+      background: #0b0b0b;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #131313;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      border: 1px solid #333;
+      background: #020202;
+      color: var(--light);
+      font-size: 0.9rem;
+    }
+
+    .contact-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 18px 24px;
+      background: #000;
+      border-top: 1px solid #111;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      color: #cccccc;
+    }
+
+    @media (max-width: 700px) {
+      .hero-inner { flex-direction: column; }
+      header { position: static; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo-text">RM GUTTERS</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="badge">Veteran Owned &amp; Operated</div>
+      <h1>Gutter Cleaning &amp; Guards in Abilene, TX</h1>
+      <h2>Keep your home protected from water damage with professional gutter cleaning, repairs, and gutter guard installation from a trusted veteran-owned local company.</h2>
+      <div class="hero-actions">
+        <a href="tel:16824459951" class="btn btn-primary">Call Now: 682-445-9951</a>
+        <a href="#contact" class="btn btn-outline">Request a Free Quote</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Why Choose RM Gutters?</h3>
+      <ul>
+        <li>Veteran owned &amp; local</li>
+        <li>Fully insured</li>
+        <li>Before &amp; after photos</li>
+        <li>Honest, upfront pricing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section id="about">
+    <div class="section-inner two-col">
+      <div>
+        <h2 class="section-title">About RM Gutters</h2>
+        <p>RM Gutters is a veteran-owned gutter service based in Abilene, TX. We specialize in gutter cleaning, small repairs, and gutter guard installation to keep your home protected from leaks, overflow, and foundation damage.</p><br>
+        <p>We show up on time, work safely, and leave your property cleaner than we found it.</p>
+      </div>
+      <div>
+        <h3 style="color: var(--primary); margin-bottom: 6px;">What You Can Expect</h3>
+        <ul class="list-dash">
+          <li>Respectful, professional crews</li>
+          <li>Safety-focused ladder and roof work</li>
+          <li>Clear communication and honest recommendations</li>
+          <li>Photos of the work so you know exactly what was done</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-inner">
+      <h2 class="section-title">Our Services</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Gutter Cleaning</h3>
+          <p>We remove leaves, dirt, and debris from gutters and downspouts, flush the system, and make sure water flows the way it should.</p>
+        </div>
+        <div class="card">
+          <h3>Gutter Guard Installation</h3>
+          <p>We install quality gutter guards to reduce clogs, prevent buildup, and extend the life of your gutter system.</p>
+        </div>
+        <div class="card">
+          <h3>Minor Gutter Repairs</h3>
+          <p>We fix common issues like loose sections, leaks at seams, missing hangers, and small sagging spots.</p>
+        </div>
+        <div class="card">
+          <h3>Roof &amp; Drainage Check</h3>
+          <p>We visually check your roof edges, fascia boards, and drainage path to help catch problems early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="section-inner">
+      <h2 class="section-title">Simple, Upfront Pricing</h2>
+      <p>Every home is different, but most customers fall into these ranges:</p><br>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Single-Story Cleaning</h3>
+          <p>$99 – $175</p>
+        </div>
+        <div class="card">
+          <h3>Two-Story Cleaning</h3>
+          <p>$150 – $250</p>
+        </div>
+        <div class="card">
+          <h3>Downspout Clearing</h3>
+          <p>$25 – $50</p>
+        </div>
+        <div class="card">
+          <h3>Minor Repairs</h3>
+          <p>$25 – $75</p>
+        </div>
+        <div class="card">
+          <h3>Gutter Guards</h3>
+          <p>$5 – $9 per linear foot</p>
+        </div>
+        <div class="card">
+          <h3>Bundle &amp; Save</h3>
+          <p>Clean + Repair + Guards = <strong>10% OFF</strong></p>
+        </div>
+      </div>
+      <p class="pricing-note">*Final quote depends on home size, debris level, roof pitch, and overall condition of your gutters and roofline.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Get Your Free Gutter Quote</h2>
+        <p>Call, text, or fill out the form and we’ll get back to you as soon as possible.</p><br>
+        <p><strong>Phone:</strong> 682-445-9951</p>
+        <p><strong>Email:</strong> rmgutters24@gmail.com</p>
+        <p><strong>Hours:</strong> Mon–Sat · 8:00 AM – 6:00 PM</p>
+        <br>
+        <p><strong>Service Area:</strong> Abilene, TX and surrounding areas.</p>
+      </div>
+
+      <div class="contact-form">
+        <!-- This form won't actually send anywhere without a backend or service like Formspree -->
+        <form>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your Name" />
+
+          <label for="address">Address</label>
+          <input id="address" type="text" name="address" placeholder="Service Address" />
+
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="phone" placeholder="Your Phone Number" />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Your Email" />
+
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option>Gutter Cleaning</option>
+            <option>Gutter Repairs</option>
+            <option>Gutter Guards</option>
+            <option>Other</option>
+          </select>
+
+          <label for="message">Message / Notes</label>
+          <textarea id="message" name="message" placeholder="Tell us a little about your home and what you need..."></textarea>
+
+          <button type="submit" class="btn btn-primary" disabled>
+            Submit (demo only - form not connected)
+          </button>
+          <p style="font-size:0.75rem; color:#aaa; margin-top:6px;">
+            *To make this form work, connect it to a service like Formspree, Getform, or your website host's form tool.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 RM Gutters, LLC · Veteran Owned &amp; Operated</div>
+    <div>Abilene, TX · Phone: 682-445-9951 · Email: rmgutters24@gmail.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
