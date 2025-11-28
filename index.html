@@ -423,37 +423,16 @@
       </div>
 
       <div class="contact-form">
-        <!-- This form won't actually send anywhere without a backend or service like Formspree -->
-        <form>
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Your Name" />
+        <!-- This form won't actually send anywhere without a backend or service like Formspree --><form action="https://api.web3forms.com/submit" method="POST">
 
-          <label for="address">Address</label>
-          <input id="address" type="text" name="address" placeholder="Service Address" />
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
-          <label for="phone">Phone</label>
-          <input id="phone" type="text" name="phone" placeholder="Your Phone Number" />
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    <button type="submit">Submit Form</button>
 
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="Your Email" />
-
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option>Gutter Cleaning</option>
-            <option>Gutter Repairs</option>
-            <option>Gutter Guards</option>
-            <option>Other</option>
-          </select>
-
-          <label for="message">Message / Notes</label>
-          <textarea id="message" name="message" placeholder="Tell us a little about your home and what you need..."></textarea>
-
-          <button type="submit" class="btn btn-primary" disabled>
-            Submit (demo only - form not connected)
-          </button>
-          <p style="font-size:0.75rem; color:#aaa; margin-top:6px;">
-            *To make this form work, connect it to a service like Formspree, Getform, or your website host's form tool.
-          </p>
         </form>
       </div>
     </div>
