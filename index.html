@@ -8,17 +8,15 @@
   <style>
     :root {
       --primary: #00b8b8;  /* turquoise */
-      --dark: #050505;
+      --dark: #0b1013;
       --light: #ffffff;
-      --gray: #f3f5f7;
-      --accent: #12e0e0;
+      --lighter: #141a1f;
+      --accent: #18dcdc;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -31,13 +29,13 @@
     a:hover { text-decoration: underline; }
 
     header {
-      background: rgba(0,0,0,0.9);
+      background: rgba(5, 8, 11, 0.95);
       backdrop-filter: blur(6px);
-      padding: 8px 24px;
+      padding: 10px 24px;
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #111;
+      border-bottom: 1px solid #1b242c;
     }
 
     .nav-container {
@@ -52,13 +50,14 @@
     .logo-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .logo-wrap img {
-      max-height: 46px;
+      max-height: 48px;
       width: auto;
       display: block;
+      border-radius: 4px;
     }
 
     .logo-text {
@@ -89,23 +88,8 @@
     }
 
     .hero {
-      padding: 70px 24px 50px;
-      background: radial-gradient(circle at top left, #038989, #000000);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #00b8b8 0, transparent 60%);
-      opacity: 0.18;
-      top: -80px;
-      right: -40px;
-      pointer-events: none;
+      padding: 60px 24px 45px;
+      background: radial-gradient(circle at top left, #1a2d33, #05080b);
     }
 
     .hero-inner {
@@ -113,29 +97,15 @@
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 32px;
+      gap: 30px;
       align-items: center;
       justify-content: space-between;
     }
 
     .hero-text {
       flex: 1 1 320px;
-      animation: fadeUp 0.7s ease-out forwards;
       opacity: 0;
-    }
-
-    .hero h1 {
-      font-size: 2.6rem;
-      margin-bottom: 12px;
-      color: var(--accent);
-    }
-
-    .hero h2 {
-      font-size: 1.05rem;
-      font-weight: 400;
-      max-width: 520px;
-      margin-bottom: 20px;
-      color: #e4fafa;
+      animation: fadeUp 0.7s ease-out forwards;
     }
 
     .badge {
@@ -152,21 +122,33 @@
       background: rgba(0,0,0,0.5);
     }
 
-    .badge span.flag {
-      font-size: 0.9rem;
+    .badge .flag { font-size: 0.9rem; }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: var(--accent);
     }
 
     .hero-subline {
       font-size: 0.9rem;
-      color: #cdecec;
-      margin-bottom: 10px;
+      color: #d5f4f4;
+      margin-bottom: 8px;
+    }
+
+    .hero h2 {
+      font-size: 1.03rem;
+      font-weight: 400;
+      max-width: 520px;
+      margin-bottom: 16px;
+      color: #e7f7f7;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .btn {
@@ -174,27 +156,27 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 11px 18px;
+      padding: 10px 18px;
       border-radius: 999px;
       font-weight: bold;
       border: none;
       cursor: pointer;
       font-size: 0.95rem;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
-      text-decoration: none;
       white-space: nowrap;
+      text-decoration: none;
     }
 
     .btn-primary {
       background: var(--primary);
       color: #000;
-      box-shadow: 0 6px 16px rgba(0, 184, 184, 0.35);
+      box-shadow: 0 6px 14px rgba(0, 184, 184, 0.35);
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0, 184, 184, 0.45);
       background: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 184, 184, 0.45);
     }
 
     .btn-outline {
@@ -208,25 +190,21 @@
       transform: translateY(-1px);
     }
 
-    .btn .phone-icon {
-      font-size: 1rem;
-    }
-
     .hero-card {
       flex: 1 1 260px;
-      background: rgba(0,0,0,0.7);
+      background: var(--lighter);
       border-radius: 14px;
-      padding: 18px 18px 16px;
-      border: 1px solid #141414;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-      animation: fadeUp 0.7s ease-out 0.15s forwards;
+      padding: 18px 18px 14px;
+      border: 1px solid #222b33;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.45);
       opacity: 0;
+      animation: fadeUp 0.7s ease-out 0.15s forwards;
     }
 
     .hero-card h3 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--primary);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
 
     .hero-card ul {
@@ -248,11 +226,11 @@
     }
 
     main {
-      background: #050505;
+      background: #0f1519;
     }
 
     section {
-      padding: 40px 24px;
+      padding: 36px 24px;
     }
 
     .section-inner {
@@ -262,20 +240,20 @@
 
     .section-title {
       font-size: 1.5rem;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--primary);
     }
 
     .section-tagline {
       font-size: 0.95rem;
-      color: #cccccc;
-      margin-bottom: 16px;
+      color: #ccd5dd;
+      margin-bottom: 14px;
     }
 
     .two-col {
       display: flex;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 22px;
     }
 
     .two-col > div {
@@ -285,42 +263,42 @@
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 10px;
+      gap: 16px;
+      margin-top: 6px;
     }
 
     .card {
-      border-radius: 14px;
-      padding: 16px;
-      background: #080808;
-      border: 1px solid #181818;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 14px 14px 12px;
+      background: #171f26;
+      border: 1px solid #262f38;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
       opacity: 0;
       animation: fadeUp 0.6s ease-out forwards;
     }
 
     .card h3 {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: var(--primary);
-      font-size: 1.05rem;
+      font-size: 1.03rem;
     }
 
     .card p {
       font-size: 0.9rem;
-      color: #e4e4e4;
+      color: #e2e7ec;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px rgba(0,0,0,0.7);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 26px rgba(0,0,0,0.65);
       border-color: var(--primary);
     }
 
     .pricing-note {
       margin-top: 10px;
       font-size: 0.9rem;
-      color: #cccccc;
+      color: #c2ccd6;
     }
 
     .list-dash {
@@ -340,7 +318,7 @@
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 24px;
+      gap: 22px;
     }
 
     .contact-info {
@@ -349,17 +327,17 @@
 
     .contact-form {
       flex: 1 1 260px;
-      background: #080808;
-      padding: 18px;
-      border-radius: 14px;
-      border: 1px solid #181818;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+      background: #171f26;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #262f38;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.55);
     }
 
     .contact-form label {
       display: block;
-      font-size: 0.85rem;
-      margin-bottom: 4px;
+      font-size: 0.82rem;
+      margin-bottom: 3px;
     }
 
     .contact-form input,
@@ -367,10 +345,10 @@
     .contact-form textarea {
       width: 100%;
       padding: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       border-radius: 6px;
-      border: 1px solid #333;
-      background: #020202;
+      border: 1px solid #333c45;
+      background: #0c1115;
       color: var(--light);
       font-size: 0.9rem;
       transition: border-color 0.18s ease, box-shadow 0.18s ease;
@@ -381,7 +359,7 @@
     .contact-form textarea:focus {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 1px rgba(0,184,184,0.6);
+      box-shadow: 0 0 0 1px rgba(0,184,184,0.55);
     }
 
     .contact-form textarea {
@@ -390,9 +368,9 @@
     }
 
     footer {
-      padding: 18px 24px;
-      background: #000;
-      border-top: 1px solid #111;
+      padding: 16px 24px;
+      background: #05080b;
+      border-top: 1px solid #1b242c;
       font-size: 0.85rem;
     }
 
@@ -403,7 +381,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 8px;
-      color: #cccccc;
+      color: #c5ced7;
     }
 
     .footer-inner a {
@@ -416,19 +394,11 @@
     }
 
     /* Animations */
-
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Simple stagger for service cards */
     .card:nth-child(1) { animation-delay: 0.05s; }
     .card:nth-child(2) { animation-delay: 0.12s; }
     .card:nth-child(3) { animation-delay: 0.19s; }
@@ -437,21 +407,11 @@
     .card:nth-child(6) { animation-delay: 0.40s; }
 
     @media (max-width: 700px) {
-      .hero-inner { flex-direction: column; }
       header { position: static; }
-      nav ul { display: none; } /* Keep header clean on small screens */
-      .hero {
-        padding-top: 40px;
-      }
-      .hero h1 {
-        font-size: 2.1rem;
-      }
-      .hero-card {
-        margin-top: 4px;
-      }
-      .logo-wrap img {
-        max-height: 40px;
-      }
+      nav ul { display: none; }
+      .hero { padding-top: 40px; }
+      .hero h1 { font-size: 2rem; }
+      .logo-wrap img { max-height: 40px; }
     }
   </style>
 </head>
@@ -488,7 +448,7 @@
       <h2>Clogged gutters can cause leaks, wood rot, and foundation damage. Let a local veteran-owned crew handle the dirty work so you don’t have to climb a ladder.</h2>
       <div class="hero-actions">
         <a href="tel:16824459951" class="btn btn-primary">
-          <span class="phone-icon">📞</span>
+          <span>📞</span>
           <span>Call Now: 682-445-9951</span>
         </a>
         <a href="#contact" class="btn btn-outline">
@@ -552,6 +512,7 @@
           <p>We visually check your roof edges, fascia boards, and drainage path to help catch issues early and keep water away from your foundation.</p>
         </div>
       </div>
+      <p class="pricing-note">*Final quote depends on home size, debris level, roof pitch, and overall condition of your gutters and roofline. Call or send a message for a fast custom quote.</p>
     </div>
   </section>
 
@@ -585,7 +546,6 @@
           <p>Clean + Repair + Guards = <strong>10% OFF</strong></p>
         </div>
       </div>
-      <p class="pricing-note">*Final quote depends on home size, debris level, roof pitch, and overall condition of your gutters and roofline. Call or send a message for a fast custom quote.</p>
     </div>
   </section>
 
@@ -602,8 +562,9 @@
 
       <div class="contact-form">
         <form action="https://api.web3forms.com/submit" method="POST">
-
           <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
+          <!-- Redirect back to your live site after successful submit -->
+          <input type="hidden" name="redirect" value="https://rmgutters24.github.io/Rm-gutters-site/">
 
           <label for="name">Name</label>
           <input id="name" type="text" name="name" required>
@@ -628,10 +589,7 @@
           <label for="message">Message / Notes</label>
           <textarea id="message" name="message" required></textarea>
 
-          <input type="hidden" name="redirect" value="https://rmgutters24.github.io/rm-gutters-site/">
-
           <button type="submit" class="btn btn-primary">Submit Request</button>
-
         </form>
       </div>
     </div>
@@ -642,7 +600,9 @@
 <footer>
   <div class="footer-inner">
     <div>© 2025 RM Gutters, LLC · Veteran Owned &amp; Operated</div>
-    <div>Abilene, TX · Phone: 682-445-9951 · Email: <a href="mailto:rmgutters24@gmail.com">rmgutters24@gmail.com</a></div>
+    <div>Abilene, TX · Phone: 682-445-9951 · Email:
+      <a href="mailto:rmgutters24@gmail.com">rmgutters24@gmail.com</a>
+    </div>
   </div>
 </footer>
 
