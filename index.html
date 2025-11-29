@@ -504,7 +504,7 @@
       .hero { padding-top: 40px; }
       .hero h1 { font-size: 2rem; }
       .logo-wrap img { max-height: 40px; }
-      .support-badge { display:none; } /* keep header clean on tiny screens */
+      .support-badge { display:none; }
     }
   </style>
 </head>
@@ -620,37 +620,88 @@
     </div>
   </section>
 
+  <!-- UPDATED PRICING SECTION -->
   <section id="pricing">
     <div class="section-inner">
       <h2 class="section-title">Simple, Upfront Pricing</h2>
-      <p class="section-tagline">Every home is different, but most gutter services fall into these ranges:</p>
+      <p class="section-tagline">Competitive, professional pricing built to grow with your home and our veteran-owned business.</p>
+
       <div class="card-grid">
+
+        <!-- Single-Story Cleaning -->
         <div class="card">
           <h3>Single-Story Gutter Cleaning</h3>
-          <p>$99 – $175</p>
+          <p>$125 – $225</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Small Homes: $125–$150</li>
+            <li>• Medium Homes: $150–$175</li>
+            <li>• Large Homes: $175–$225</li>
+          </ul>
         </div>
+
+        <!-- Two-Story Cleaning -->
         <div class="card">
           <h3>Two-Story Gutter Cleaning</h3>
-          <p>$150 – $250</p>
+          <p>$200 – $400</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Small Homes: $200–$250</li>
+            <li>• Medium Homes: $250–$300</li>
+            <li>• Large Homes: $300–$400</li>
+          </ul>
         </div>
+
+        <!-- Downspout Services -->
         <div class="card">
-          <h3>Downspout Clearing</h3>
-          <p>$25 – $50</p>
+          <h3>Downspout Services</h3>
+          <p>$35 – $90</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Clear Clog: $35–$50</li>
+            <li>• Full Flush: $50–$75</li>
+            <li>• Fix / Reattach: $25–$50</li>
+            <li>• Extensions: $45–$90</li>
+          </ul>
         </div>
+
+        <!-- Minor Repairs -->
         <div class="card">
-          <h3>Minor Repairs</h3>
-          <p>$25 – $75</p>
+          <h3>Minor Gutter Repairs</h3>
+          <p>$40 – $150+</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Seal Leaks: $40–$75</li>
+            <li>• Replace Hangers: $8–$10 each</li>
+            <li>• Patch Holes: $40–$85</li>
+            <li>• Reslope Section: $75–$150</li>
+          </ul>
         </div>
+
+        <!-- Gutter Guards -->
         <div class="card">
-          <h3>Gutter Guards</h3>
-          <p>$5 – $9 per linear foot</p>
+          <h3>Gutter Guard Installation</h3>
+          <p>$6 – $12 per foot</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Standard Mesh: $6–$8/ft</li>
+            <li>• Premium Stainless: $8–$12/ft</li>
+            <li>• Includes cleaning before install</li>
+          </ul>
         </div>
+
+        <!-- Christmas Lights -->
         <div class="card holiday-card">
           <h3>Christmas Light Installation</h3>
-          <p>Holiday Season Only – Pricing varies by roofline and design. Request a free custom quote below.</p>
+          <p>$3 – $8 per foot</p>
+          <ul style="margin-top:10px; font-size:0.9rem; list-style:none; padding-left:0;">
+            <li>• Single-story: $3–$5/ft</li>
+            <li>• Two-story: $5–$8/ft</li>
+            <li>• Takedown: 50% of install price</li>
+          </ul>
         </div>
+
       </div>
-      <p class="pricing-note">*Final quote depends on home size, debris level, roof pitch, and overall condition of your gutters and roofline. Holiday light pricing is based on layout and length of roof/gutter lines.</p>
+
+      <p class="pricing-note">
+        *Final pricing depends on home size, roof pitch, debris level, access, and overall condition of your gutters and roofline.
+        Holiday light pricing is based on layout, roof height, and total footage.
+      </p>
     </div>
   </section>
 
@@ -704,7 +755,6 @@
       <div class="contact-form">
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
-          <!-- Redirect back to your live site after successful submit -->
           <input type="hidden" name="redirect" value="https://rmgutters24.github.io/Rm-gutters-site/">
 
           <label for="name">Name</label>
