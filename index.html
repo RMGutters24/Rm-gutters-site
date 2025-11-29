@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>RM Gutters – Veteran Owned Gutter Cleaning in Abilene, TX</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="RM Gutters is a veteran-owned gutter cleaning, repair, and seasonal Christmas light installation company serving Abilene, TX and surrounding areas." />
+  <meta name="description" content="RM Gutters is a veteran-owned gutter cleaning, repair, gutter guard, and seasonal Christmas light installation company serving Abilene, TX and surrounding areas." />
   <style>
     :root {
       --primary: #00b8b8;  /* turquoise */
@@ -66,6 +66,18 @@
       font-weight: bold;
       color: var(--primary);
       letter-spacing: 1.2px;
+    }
+
+    .support-badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--primary);
+      margin-left: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      white-space: nowrap;
     }
 
     nav ul {
@@ -406,6 +418,47 @@
       resize: vertical;
     }
 
+    /* Veterans support section */
+    .vets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .vets-card {
+      background: #171f26;
+      border-radius: 12px;
+      border: 1px solid #262f38;
+      padding: 14px;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+
+    .vets-card h3 {
+      margin-bottom: 6px;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .donation-btn {
+      display:inline-block;
+      padding:12px 22px;
+      background:#00b8b8;
+      color:black;
+      font-weight:bold;
+      border-radius:30px;
+      text-decoration:none;
+      box-shadow:0 4px 12px rgba(0, 184, 184, 0.35);
+      margin-top: 14px;
+    }
+
+    .donation-btn:hover {
+      background: var(--accent);
+      box-shadow:0 6px 18px rgba(0, 184, 184, 0.45);
+      transform: translateY(-1px);
+    }
+
     footer {
       padding: 16px 24px;
       background: #05080b;
@@ -451,6 +504,7 @@
       .hero { padding-top: 40px; }
       .hero h1 { font-size: 2rem; }
       .logo-wrap img { max-height: 40px; }
+      .support-badge { display:none; } /* keep header clean on tiny screens */
     }
   </style>
 </head>
@@ -463,12 +517,14 @@
         <img src="logo.png" alt="RM Gutters - Veteran Owned Logo">
       </a>
       <span class="logo-text">RM GUTTERS</span>
+      <span class="support-badge">💙 SUPPORTING VETERANS</span>
     </div>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#veterans">Support Veterans</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -494,8 +550,8 @@
         <a href="#contact" class="btn btn-outline">
           💧 Get a Gutter Quote
         </a>
-        <a href="#contact" class="btn btn-outline btn-holiday">
-          🎄 Christmas Light Quote
+        <a href="#veterans" class="btn btn-outline btn-holiday">
+          💙 Support Local Veterans
         </a>
       </div>
     </div>
@@ -598,6 +654,42 @@
     </div>
   </section>
 
+  <!-- FULL VETERAN SUPPORT "PAGE" SECTION -->
+  <section id="veterans">
+    <div class="section-inner">
+      <h2 class="section-title">Supporting Veterans in Need</h2>
+      <p class="section-tagline">As a veteran-owned business, RM Gutters gives back by helping other Veterans in our community whenever we can.</p>
+
+      <div class="vets-grid">
+        <div class="vets-card">
+          <h3>Our Mission</h3>
+          <p>We know first-hand that life after service isn’t always easy. Our goal is to use a portion of our time and resources to support local Veterans who are struggling — whether that’s with basic needs, small emergency help, or connection to local resources.</p>
+        </div>
+        <div class="vets-card">
+          <h3>How Donations Help</h3>
+          <p>We accept donations that go directly toward helping Veterans in need in the Abilene area. This can include groceries, gas cards, small bills, or other critical needs on a case-by-case basis.</p>
+          <p style="margin-top:6px;">Every bit helps, and we’re grateful for anyone who chooses to support.</p>
+        </div>
+        <div class="vets-card">
+          <h3>Transparency & Note</h3>
+          <p>RM Gutters is a veteran-owned small business, not a registered nonprofit or 501(c)(3). Donations are voluntary and currently not tax-deductible. We keep things simple and local — focused on real people and real needs.</p>
+          <p style="margin-top:6px;">If you know a Veteran in need, you can also reach out and tell us their situation.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:18px;">
+        <p>💙 <strong>We accept donations to help other Veterans in need.</strong></p>
+        <p style="margin-top:6px;">If you’d like to give, you can donate directly through Venmo:</p>
+        <a href="https://venmo.com/rmgutters" target="_blank" class="donation-btn">
+          💙 Donate via Venmo @rmgutters
+        </a>
+        <p style="margin-top:10px; font-size:0.85rem; color:#c5ced7;">
+          Venmo: <strong>@rmgutters</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="section-inner contact-grid">
       <div class="contact-info">
@@ -649,7 +741,10 @@
 
 <footer>
   <div class="footer-inner">
-    <div>© 2025 RM Gutters, LLC · Veteran Owned &amp; Operated</div>
+    <div>
+      © 2025 RM Gutters, LLC · Veteran Owned &amp; Operated · Proudly Supporting Veterans in Need  
+      · Venmo: <a href="https://venmo.com/rmgutters">@rmgutters</a>
+    </div>
     <div>Abilene, TX · Phone: 682-445-9951 · Email:
       <a href="mailto:rmgutters24@gmail.com">rmgutters24@gmail.com</a>
     </div>
