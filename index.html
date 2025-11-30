@@ -1,14 +1,20 @@
+Code
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>RM Gutters – Veteran Owned Gutter Cleaning in Abilene, TX</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="RM Gutters is a veteran-owned gutter cleaning, repair, gutter guard, and seasonal Christmas light installation company serving Abilene, TX and surrounding areas." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="RM Gutters is a veteran-owned gutter cleaning and holiday light installation service in Abilene, TX." />
+
   <style>
     :root {
       --primary: #00b8b8;
+      --primary-glow: rgba(0, 184, 184, 0.8);
       --dark: #0b1013;
+      --dark-transparent: rgba(11, 16, 19, 0.8);
       --light: #ffffff;
       --lighter: #141a1f;
       --accent: #18dcdc;
@@ -16,91 +22,273 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      line-height: 1.6;
-    }
+    body { font-family: Arial, sans-serif; background: var(--dark); color: var(--light); }
 
     a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
+    /****************************************
+    ========== HEADER + NAVIGATION ==========
+    *****************************************/
     header {
-      background: rgba(5, 8, 11, 0.95);
-      backdrop-filter: blur(6px);
-      padding: 10px 24px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 999;
+      background: var(--dark-transparent);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid #1b242c;
+      padding: 10px 20px;
     }
 
     .nav-container {
-      max-width:1100px; margin:0 auto;
-      display:flex; justify-content:space-between; align-items:center;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav ul { list-style:none; display:flex; gap:16px; }
-    nav li a {
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-wrap img { max-height: 46px; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
       color: var(--light);
-      padding:6px 10px; border-radius:20px;
-      transition:0.2s;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 6px;
     }
-    nav li a:hover { background:var(--primary); color:black; }
 
+    nav ul li a:hover {
+      background: var(--primary);
+      color: black;
+    }
+
+    /****************************************
+    ========= MOBILE HAMBURGER MENU =========
+    *****************************************/
+    .hamburger {
+      display: none;
+      width: 36px;
+      height: 26px;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 0 8px var(--primary-glow);
+      transition: 0.3s ease;
+    }
+
+    /* Mobile menu hidden by default */
+    #mobile-menu {
+      display: none;
+      background: #072223;
+      padding: 14px 0;
+      border-bottom: 2px solid var(--primary);
+      animation: slideDown 0.35s ease forwards;
+    }
+
+    #mobile-menu a {
+      display: block;
+      padding: 12px 20px;
+      color: white;
+      font-size: 1.05rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    #mobile-menu a:hover {
+      background: var(--primary);
+      color: black;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /****************************************
+    =========== HERO SECTION STYLES =========
+    *****************************************/
     .hero {
-      padding:60px 24px 45px;
-      background: radial-gradient(circle at top left,#1a2d33,#05080b);
+      padding: 60px 24px;
+      background: radial-gradient(circle at top left, #1a2d33, #05080b);
     }
 
-    .hero-inner { max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:30px; }
-
-    /* Cards, buttons, footer, etc — unchanged styling (kept from your original code) */
-
-    .section-title { color:var(--primary); font-size:1.6rem; margin-bottom:10px; }
-    .section-tagline { color:#ccd5dd; margin-bottom:16px; }
-
-    /* Outreach Page Section */
-    .outreach-grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap:16px;
-      margin-top:18px;
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .outreach-card {
-      background:#171f26;
-      border:1px solid #262f38;
-      padding:16px;
-      border-radius:12px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.45);
-      font-size:0.92rem;
-      animation:fadeUp 0.6s ease-out forwards;
+    .hero-text {
+      flex: 1 1 320px;
     }
 
-    .outreach-card h3 {
-      color:var(--primary);
-      margin-bottom:8px;
-      font-size:1.07rem;
-      font-weight:bold;
+    .hero h1 {
+      font-size: 2.4rem;
+      color: var(--accent);
     }
 
+    .hero-subline { margin-bottom: 6px; color: #d5f4f4; }
+
+    .hero h2 {
+      color: #e7f7f7;
+      font-size: 1.02rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: black;
+      box-shadow: 0 6px 14px rgba(0, 184, 184, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0, 184, 184, 0.12);
+    }
+
+    /****************************************
+    ============ SECTION WRAPPER ============
+    *****************************************/
+    section { padding: 34px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #171f26;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #262f38;
+      font-size: 0.92rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+
+    .card h3 { color: var(--primary); margin-bottom: 6px; }
+
+    /****************************************
+    ============ OUTREACH + VETS ============
+    *****************************************/
+
+    .outreach-grid, .vets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .outreach-card, .vets-card {
+      background: #171f26;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid #262f38;
+    }
+
+    .outreach-card h3, .vets-card h3 {
+      color: var(--primary);
+      font-size: 1.06rem;
+    }
+
+    /****************************************
+    ============ CONTACT FORM ===============
+    *****************************************/
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #0c1115;
+      border: 1px solid #262f38;
+      color: white;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    /****************************************
+    ============= FOOTER STYLE =============
+    *****************************************/
     footer {
-      padding:16px 24px;
-      background:#05080b;
-      border-top:1px solid #1b242c;
-      font-size:0.85rem;
+      padding: 18px 24px;
+      background: #05080b;
+      border-top: 1px solid #1b242c;
+      font-size: 0.9rem;
     }
 
-    .footer-inner { max-width:1100px; margin:0 auto; color:#c5ced7; }
+    /****************************************
+    ========== MOBILE BREAKPOINTS ==========
+    *****************************************/
 
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(14px); }
-      to { opacity:1; transform:translateY(0); }
+    @media (max-width: 850px) {
+      nav ul { display: none; }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero h2 { font-size: 0.95rem; }
+      .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -110,10 +298,18 @@
 <header>
   <div class="nav-container">
     <div class="logo-wrap">
-      <img src="logo.png" alt="RM Gutters - Veteran Owned Logo" style="max-height:48px;">
-      <span class="logo-text" style="color:var(--primary); font-weight:bold;">RM GUTTERS</span>
-      <span class="support-badge" style="border:1px solid var(--primary); color:var(--primary); padding:2px 6px; border-radius:20px; font-size:0.7rem;">💙 SUPPORTING VETERANS</span>
+      <img src="logo.png" alt="RM Gutters Logo">
+      <span style="color:var(--primary);font-weight:bold;">RM GUTTERS</span>
     </div>
+
+    <!-- HAMBURGER ICON -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- DESKTOP MENU -->
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -125,89 +321,308 @@
       </ul>
     </nav>
   </div>
+
+  <!-- MOBILE SLIDE-DOWN MENU -->
+  <div id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#veterans">Support Veterans</a>
+    <a href="#outreach">Community Outreach</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
-<!-- HERO SECTION (unchanged) -->
+<!-- HERO SECTION -->
 <section class="hero" id="top">
-  <!-- ... your hero content stays the same ... -->
-</section>
+  <div class="hero-inner">
+    
+    <div class="hero-text">
+      <div class="badge" style="
+        display:inline-flex;
+        gap:6px;
+        padding:4px 10px;
+        border-radius:20px;
+        background:rgba(0,0,0,0.4);
+        border:1px solid var(--primary);
+        font-size:0.8rem;
+        letter-spacing:1px;">
+        🇺🇸 VETERAN OWNED & OPERATED
+      </div>
 
-<main>
+      <div class="holiday-badge" style="
+        display:inline-block;
+        margin-top:6px;
+        padding:4px 10px;
+        border-radius:20px;
+        background:rgba(255,204,77,0.15);
+        border:1px solid var(--holiday);
+        color:var(--holiday);
+        font-size:0.85rem;">
+        Holiday Season Only – We Install Christmas Lights!
+      </div>
 
-<!-- ABOUT SECTION WITH YOUR ABILENE GOAL -->
-<section id="about">
-  <div class="section-inner two-col">
-    <div>
-      <h2 class="section-title">About RM Gutters</h2>
-      <p>RM Gutters is a veteran-owned gutter service based in Abilene, TX...</p><br>
-      <p>We show up on time, work safely...</p><br>
+      <h1>Clean, Safe Gutters for Your Home.</h1>
+      <p class="hero-subline">RM Gutters • Abilene, TX</p>
 
-      <p style="color:var(--accent); font-weight:bold;">
-        Abilene Goal: Give people a chance to get off the streets and get a job with us. This will be a few months in the making, but I plan to help people get back on their feet.
+      <h2>
+        Clogged gutters and messy rooflines cause leaks, wood rot, and foundation damage.
+        Let a local veteran-owned team handle the dirty work — and your Christmas lights.
+      </h2>
+
+      <div class="hero-actions">
+        <a href="tel:16824459951" class="btn btn-primary">📞 Call Now: 682-445-9951</a>
+        <a href="#contact" class="btn btn-outline">💧 Get a Gutter Quote</a>
+        <a href="#veterans" class="btn btn-outline" style="border-color:var(--holiday);color:var(--holiday);">
+          💙 Support Local Veterans
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card" style="
+      flex:1 1 260px;
+      background:var(--lighter);
+      border-radius:12px;
+      padding:18px;
+      border:1px solid #222b33;
+      box-shadow:0 8px 22px rgba(0,0,0,0.5);">
+      <h3 style="color:var(--primary);margin-bottom:6px;">Why Abilene Chooses RM Gutters</h3>
+
+      <ul style="list-style:none;padding-left:0;font-size:0.9rem;">
+        <li>✓ Veteran owned & proud to serve Abilene</li>
+        <li>✓ Fast, friendly, and respectful service</li>
+        <li>✓ Before & after photos included</li>
+        <li>✓ Honest, upfront pricing</li>
+      </ul>
+
+      <p style="color:var(--holiday);margin-top:10px;font-size:0.85rem;">
+        Holiday Season Only: Professional Christmas light installation available by quote.
       </p>
     </div>
 
-    <div>
-      <h3 style="color:var(--primary); margin-bottom:6px;">What You Can Expect</h3>
-      <ul class="list-dash">
-        <li>Respectful, professional crews</li>
-        <li>Safety-focused work</li>
-        <li>Clear communication</li>
-        <li>Before & after photos</li>
-      </ul>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="section-inner">
+    <h2 class="section-title">About RM Gutters</h2>
+
+    <div style="display:flex;flex-wrap:wrap;gap:24px;">
+      
+      <div style="flex:1 1 300px;">
+        <p>
+          RM Gutters is a veteran-owned gutter service based in Abilene, TX.
+          We specialize in gutter cleaning, small repairs, gutter guards,
+          and seasonal Christmas light installation to protect your home.
+        </p><br>
+
+        <p>
+          We show up on time, work safely, and treat your home with respect.
+          Our mission is to keep water away from your foundation and give you
+          peace of mind.
+        </p><br>
+
+        <p style="color:var(--accent);font-weight:bold;">
+          Abilene Goal: Give people a chance to get off the streets and get a job with us.
+          This will be a few months in the making — but we plan to help people get back on their feet.
+        </p>
+      </div>
+
+      <div style="flex:1 1 300px;">
+        <h3 style="color:var(--primary);margin-bottom:6px;">What You Can Expect</h3>
+        <ul style="list-style:none;font-size:0.95rem;">
+          <li>— Respectful, professional crews</li>
+          <li>— Safety-focused ladder & roof work</li>
+          <li>— Clear communication</li>
+          <li>— Before & after photos on every job</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- SERVICES SECTION -->
-<!-- ... unchanged ... -->
+<section id="services">
+  <div class="section-inner">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-tagline">Professional gutter care + holiday lighting for Abilene homeowners.</p>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Gutter Cleaning</h3>
+        <p>We remove debris, flush downspouts, and ensure water flows properly.</p>
+      </div>
+
+      <div class="card">
+        <h3>Gutter Guard Installation</h3>
+        <p>Quality guards that reduce clogs, prevent buildup, and extend gutter life.</p>
+      </div>
+
+      <div class="card">
+        <h3>Minor Repairs</h3>
+        <p>We fix leaks, loose sections, and sagging gutters before they get worse.</p>
+      </div>
+
+      <div class="card">
+        <h3>Roof & Drainage Check</h3>
+        <p>We check roof edges, fascia boards, and drainage paths for potential issues.</p>
+      </div>
+
+      <div class="card holiday-card" style="border-color:var(--holiday);">
+        <h3 style="color:var(--holiday);">Christmas Light Installation</h3>
+        <p>Safe, beautiful roofline lighting installation and takedown — seasonal only.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- PRICING SECTION -->
-<!-- ... unchanged ... -->
-
-<!-- VETERANS SECTION -->
-<!-- ... unchanged ... -->
-
-<!-- ⭐ NEW COMMUNITY OUTREACH PAGE ⭐ -->
-<section id="outreach">
+<section id="pricing">
   <div class="section-inner">
-    <h2 class="section-title">Community Outreach</h2>
-    <p class="section-tagline">Helping Abilene grow stronger — one person, one home, and one opportunity at a time.</p>
+    <h2 class="section-title">Simple, Upfront Pricing</h2>
+    <p class="section-tagline">Competitive, honest pricing with no surprises.</p>
 
-    <div class="outreach-grid">
-      
-      <div class="outreach-card">
-        <h3>Our Abilene Mission</h3>
-        <p>Our long-term vision is to help people in Abilene get off the streets and get back on their feet. Some people just need a chance — and we’re building a place where they can find that chance.</p>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Single-Story Cleaning</h3>
+        <p>$125 – $225</p>
       </div>
 
-      <div class="outreach-card">
-        <h3>Second Chance Employment</h3>
-        <p>We aim to open doors for those who are struggling by offering real work opportunities. Gutter cleaning, light labor, small repairs — we teach, train, and help people rebuild confidence through steady income.</p>
+      <div class="card">
+        <h3>Two-Story Cleaning</h3>
+        <p>$200 – $400</p>
       </div>
 
-      <div class="outreach-card">
-        <h3>Future Work Program</h3>
-        <p>Over the next few months, we plan to build a structured program for people who want to work but need support. This includes rides to job sites, tools, training, and mentorship.</p>
+      <div class="card">
+        <h3>Downspout Services</h3>
+        <p>$35 – $90</p>
       </div>
 
-      <div class="outreach-card">
-        <h3>Community Support</h3>
-        <p>We connect with local churches, veteran groups, and shelters to identify people who genuinely want a fresh start. Every job we take on helps us expand these outreach efforts.</p>
+      <div class="card">
+        <h3>Minor Repairs</h3>
+        <p>$40 – $150+</p>
       </div>
 
-      <div class="outreach-card">
-        <h3>How You Can Help</h3>
-        <p>You can support our outreach by booking services, sharing our business, or donating through Venmo. 100% of donated funds go toward helping someone in need in Abilene.</p>
+      <div class="card">
+        <h3>Gutter Guards</h3>
+        <p>$6 – $12 per foot</p>
+      </div>
+
+      <div class="card" style="border-color:var(--holiday);">
+        <h3 style="color:var(--holiday);">Christmas Light Install</h3>
+        <p>$3 – $8 per foot</p>
       </div>
 
     </div>
 
-    <div style="margin-top:24px; text-align:center;">
+  </div>
+</section>
+
+<!-- VETERANS SECTION -->
+<section id="veterans">
+  <div class="section-inner">
+    <h2 class="section-title">Supporting Veterans in Need</h2>
+    <p class="section-tagline">Helping our brothers & sisters who served — right here in Abilene.</p>
+
+    <div class="vets-grid">
+
+      <div class="vets-card">
+        <h3>Our Mission</h3>
+        <p>
+          Life after service isn’t always simple. RM Gutters gives back by helping local Veterans
+          who are struggling with basic needs, emergencies, or finding support.
+        </p>
+      </div>
+
+      <div class="vets-card">
+        <h3>How Donations Help</h3>
+        <p>
+          100% of donated funds go directly toward helping Veterans in Abilene — including food,
+          gas, bills, and emergency needs.
+        </p>
+      </div>
+
+      <div class="vets-card">
+        <h3>Transparency</h3>
+        <p>
+          RM Gutters is a veteran-owned small business (not a nonprofit). Donations are voluntary
+          and not tax-deductible — but every dollar helps someone local.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:18px;">
       <a href="https://venmo.com/rmgutters"
-         class="donation-btn"
-         style="background:var(--primary); padding:12px 22px; border-radius:30px; font-weight:bold; color:black; text-decoration:none;">
-        💙 Support Our Community Outreach
+         style="background:var(--primary);padding:12px 22px;border-radius:30px;color:black;font-weight:bold;text-decoration:none;box-shadow:0 6px 14px rgba(0,184,184,0.35);">
+        💙 Donate via Venmo @rmgutters
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMUNITY OUTREACH SECTION -->
+<section id="outreach">
+  <div class="section-inner">
+    <h2 class="section-title">Community Outreach</h2>
+    <p class="section-tagline">
+      Building a stronger Abilene — one job, one person, one second chance at a time.
+    </p>
+
+    <div class="outreach-grid">
+
+      <div class="outreach-card">
+        <h3>Our Abilene Mission</h3>
+        <p>
+          We believe everyone deserves a shot at starting over. RM Gutters is working toward
+          offering real opportunities for people trying to get off the streets.
+        </p>
+      </div>
+
+      <div class="outreach-card">
+        <h3>Second Chance Employment</h3>
+        <p>
+          Our plan includes hiring individuals who need a fresh start — giving them work,
+          training, stability, and support.
+        </p>
+      </div>
+
+      <div class="outreach-card">
+        <h3>Training Program</h3>
+        <p>
+          As the business grows, a formal work program will provide skills training, rides to job
+          sites, tools, and mentorship.
+        </p>
+      </div>
+
+      <div class="outreach-card">
+        <h3>Community Resources</h3>
+        <p>
+          We work with churches, shelters, and outreach groups to connect people to support,
+          meals, and emergency help.
+        </p>
+      </div>
+
+      <div class="outreach-card">
+        <h3>How You Can Help</h3>
+        <p>
+          Booking our services directly fuels this outreach. Donations support supplies, food,
+          basic needs, and future employment opportunities.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:20px;">
+      <a href="https://venmo.com/rmgutters"
+         style="background:var(--primary);padding:12px 22px;border-radius:30px;color:black;font-weight:bold;text-decoration:none;box-shadow:0 6px 14px rgba(0,184,184,0.35);">
+        💙 Support Community Outreach
       </a>
     </div>
 
@@ -215,16 +630,94 @@
 </section>
 
 <!-- CONTACT SECTION -->
-<!-- ... unchanged ... -->
+<section id="contact">
+  <div class="section-inner contact-grid">
 
-</main>
+    <div class="contact-info" style="flex:1 1 260px;">
+      <h2 class="section-title">Get Your Free Quote</h2>
+      <p>Tell us what you need — we'll respond as soon as possible.</p><br>
 
+      <p><strong>Phone:</strong> 682-445-9951</p>
+      <p><strong>Email:</strong> ramking0913@gmail.com</p>
+      <p><strong>Hours:</strong> Mon–Sat · 8 AM – 6 PM</p><br>
+      <p><strong>Service Area:</strong> Abilene, TX + surrounding towns</p>
+    </div>
+
+    <div class="contact-form" style="
+      flex:1 1 260px;
+      background:#171f26;
+      padding:16px;
+      border-radius:12px;
+      border:1px solid #262f38;">
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="address">Address</label>
+        <input id="address" type="text" name="address" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" name="phone" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="service">Service Needed</label>
+        <select id="service" name="service">
+          <option value="Gutter Cleaning">Gutter Cleaning</option>
+          <option value="Gutter Repairs">Gutter Repairs</option>
+          <option value="Gutter Guards">Gutter Guards</option>
+          <option value="Christmas Light Installation">Christmas Light Installation</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="message">Message / Notes</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit"
+                style="margin-top:10px;background:var(--primary);padding:10px 20px;border-radius:30px;font-weight:bold;color:black;cursor:pointer;">
+          Submit Request
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    © 2025 RM Gutters, LLC · Veteran Owned · Supporting Veterans & Community Outreach  
-    · Venmo: @rmgutters · Abilene, TX
+    © 2025 RM Gutters, LLC · Veteran Owned · Community Outreach  
+    · Venmo: @rmgutters · Abilene, TX  
+    · Email: <a href="mailto:ramking0913@gmail.com" style="color:var(--primary);">ramking0913@gmail.com</a>
   </div>
 </footer>
+
+<!-- HAMBURGER MENU SCRIPT -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+
+    // Animate icon into X
+    if (menuOpen) {
+      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
+      hamburger.children[1].style.opacity = "0";
+      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
+    } else {
+      hamburger.children[0].style.transform = "none";
+      hamburger.children[1].style.opacity = "1";
+      hamburger.children[2].style.transform = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
