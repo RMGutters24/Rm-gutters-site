@@ -53,36 +53,85 @@
 </header>
 
 <main>
+  <!-- LEAVE A REVIEW FORM -->
   <section>
-    <div class="section-inner">
-      <h1 class="section-title">Customer Reviews</h1>
-      <p class="section-tagline">Real feedback from homeowners we’ve helped in Abilene and nearby.</p>
+    <div class="section-inner contact-grid">
+      <div class="contact-panel">
+        <h1 class="section-title">Leave a Review</h1>
+        <p class="section-tagline">
+          If we’ve done work for you, we’d be honored if you’d share your experience.
+        </p>
 
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-name">Name Here – City, TX</div>
-          <p>“Type your real 5-star review here when customers send them to you.”</p>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★☆</div>
-          <div class="review-name">Name Here – City, TX</div>
-          <p>“Another review goes here. You can copy/paste from text messages or Facebook (with permission).”</p>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-name">Name Here – City, TX</div>
-          <p>“Great communication, very professional, and the gutters & lights turned out awesome.”</p>
-        </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <div class="review-name">Name Here – City, TX</div>
-          <p>“On time, respectful, and left everything cleaner than they found it. Highly recommend.”</p>
-        </div>
+        <p style="font-size:0.9rem;color:#a7bccd;">
+          Your review will be sent directly to RM Gutters. We may display it on this
+          page after we review it. No fake reviews, ever — just real homeowners in our
+          community.
+        </p>
       </div>
 
-      <p style="margin-top:18px;font-size:0.85rem;color:#a7bccd;">
-        As you collect real reviews on Facebook, Google, or text, you can replace these with actual names and quotes.
+      <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- same access key you used on your contact form -->
+          <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
+          <input type="hidden" name="subject" value="New RM Gutters Website Review">
+
+          <label for="review-name">Name</label>
+          <input id="review-name" type="text" name="name" required>
+
+          <label for="review-city">City / Area</label>
+          <input id="review-city" type="text" name="city" placeholder="Abilene, TX" required>
+
+          <label for="review-rating">Rating</label>
+          <select id="review-rating" name="rating" required>
+            <option value="5">★★★★★ – 5 Stars</option>
+            <option value="4">★★★★☆ – 4 Stars</option>
+            <option value="3">★★★☆☆ – 3 Stars</option>
+            <option value="2">★★☆☆☆ – 2 Stars</option>
+            <option value="1">★☆☆☆☆ – 1 Star</option>
+          </select>
+
+          <label for="review-text">Your Review</label>
+          <textarea id="review-text" name="message" rows="4" required></textarea>
+
+          <label style="font-size:0.8rem;margin-bottom:10px;">
+            <input type="checkbox" name="consent" required>
+            I give RM Gutters permission to display this review on their website and marketing.
+          </label>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:10px;">
+            Submit Review
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLIC REVIEWS SECTION (starts empty / honest) -->
+  <section>
+    <div class="section-inner">
+      <h2 class="section-title">What Homeowners Are Saying</h2>
+      <p class="section-tagline">
+        Reviews shown here are from real customers who hired RM Gutters.
+      </p>
+
+      <div class="reviews-grid">
+        <!--
+          When you get real reviews emailed to you,
+          copy/paste them into cards like this, replacing the text.
+          Example (uncomment and edit when you have a real review):
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">John D. – Abilene, TX</div>
+          <p>“RM Gutters did an amazing job on our gutters and Christmas lights.”</p>
+        </div>
+
+        -->
+
+      </div>
+
+      <p style="margin-top:18px;font-size:0.9rem;color:#a7bccd;">
+        No reviews listed yet — be the first to leave one using the form above!
       </p>
     </div>
   </section>
