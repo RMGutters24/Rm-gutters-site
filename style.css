@@ -7,7 +7,6 @@
   --lighter: #0f1820;
   --accent: #18dcdc;
   --holiday: #ffcc4d;
-  --danger: #ff5a5a;
 }
 
 /* RESET */
@@ -20,7 +19,6 @@ body {
   min-height: 100vh;
 }
 
-/* GLOBAL */
 a { color: var(--primary); text-decoration: none; }
 main { padding: 80px 24px 40px; }
 .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -95,7 +93,7 @@ nav a:hover {
   position: absolute;
   right: 0;
   top: 110%;
-  min-width: 180px;
+  min-width: 190px;
   background: #07141a;
   border-radius: 10px;
   border: 1px solid #1e3039;
@@ -146,10 +144,6 @@ nav a:hover {
   border-bottom: 1px solid rgba(255,255,255,0.06);
   color: white;
   font-size: 0.95rem;
-}
-#mobile-menu a span {
-  font-size: 0.8rem;
-  color: #8fbec0;
 }
 
 /* HERO */
