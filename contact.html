@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact & Free Quote | RM Gutters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="RM Gutters Logo" />
+      <div>
+        <div class="logo-text-main">RM GUTTERS</div>
+        <div class="logo-text-sub">Veteran Owned • Abilene, TX</div>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item">
+          <a href="#" class="dropdown-toggle">More</a>
+          <div class="dropdown-menu">
+            <a href="community.html">Veterans & Outreach</a>
+            <a href="contact.html">Contact & Quotes</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="community.html">Veterans & Outreach</a>
+    <a href="contact.html">Contact & Quotes</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="section-inner contact-grid">
+      <div class="contact-panel">
+        <h1 class="section-title">Get Your Free Quote</h1>
+        <p class="section-tagline">Tell us what you need — we’ll respond as soon as possible.</p>
+
+        <p><strong>Phone:</strong> 682-445-9951</p>
+        <p><strong>Email:</strong> ramking0913@gmail.com</p>
+        <p><strong>Hours:</strong> Mon–Sat · 8 AM – 6 PM</p>
+        <p><strong>Service Area:</strong> Abilene, TX + surrounding towns</p>
+
+        <p style="margin-top:14px;font-size:0.9rem;color:#a7bccd;">
+          Prefer texting or sending photos of your gutters or roofline?  
+          You can text pictures to the number above and we’ll give you a more accurate quote.
+        </p>
+      </div>
+
+      <div class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
+
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" required>
+
+          <label for="address">Address</label>
+          <input id="address" type="text" name="address" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="phone" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required>
+
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="Gutter Cleaning">Gutter Cleaning</option>
+            <option value="Gutter Repairs">Gutter Repairs</option>
+            <option value="Gutter Guards">Gutter Guards</option>
+            <option value="Christmas Light Installation">Christmas Light Installation</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message / Notes</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:10px;">
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    © 2025 RM Gutters, LLC · Veteran Owned · Abilene, TX · Venmo: @rmgutters ·
+    Email: <a href="mailto:ramking0913@gmail.com">ramking0913@gmail.com</a> · Phone: 682-445-9951
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+
+    if (menuOpen) {
+      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
+      hamburger.children[1].style.opacity = "0";
+      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
+    } else {
+      hamburger.children[0].style.transform = "none";
+      hamburger.children[1].style.opacity = "1";
+      hamburger.children[2].style.transform = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
