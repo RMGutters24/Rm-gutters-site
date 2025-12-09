@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | RM Gutters – Abilene, TX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="RM Gutters Logo" />
+      <div>
+        <div class="logo-text-main">RM GUTTERS</div>
+        <div class="logo-text-sub">Veteran Owned • Abilene, TX</div>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item">
+          <a href="#" class="dropdown-toggle">More</a>
+          <div class="dropdown-menu">
+            <a href="community.html">Veterans & Outreach</a>
+            <a href="contact.html">Contact & Quotes</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="community.html">Veterans & Outreach</a>
+    <a href="contact.html">Contact & Quotes</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="section-inner">
+      <h1 class="section-title">Our Services</h1>
+      <p class="section-tagline">From clogged gutters to glowing Christmas lights — we’ve got you.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-tag">Gutters</div>
+          <h3>Gutter Cleaning</h3>
+          <p>Full cleanout of gutters and downspouts. We remove leaves, mud, and debris and make sure everything drains properly.</p>
+          <p style="margin-top:6px;font-size:0.85rem;color:#9fb9c8;">Includes debris removal, downspout flush, and before/after photos.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Protection</div>
+          <h3>Gutter Guard Installation</h3>
+          <p>Quality guards installed to help keep gutters clear for longer and cut down on how often you need cleanings.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Repairs</div>
+          <h3>Minor Repairs</h3>
+          <p>Seal small leaks, tighten loose hangers, fix sagging runs, and replace short damaged sections when possible.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Inspection</div>
+          <h3>Roof & Drainage Check</h3>
+          <p>We visually check roof edges, fascia boards, and ground drainage paths and let you know about any concerns.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Holiday</div>
+          <h3>Christmas Light Installation</h3>
+          <p>Roofline lighting designed for your home. We install, secure, set timers, and return after the holidays to remove everything.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Extras</div>
+          <h3>Add-Ons</h3>
+          <p>Have a special request? Let us know — from garage trim lighting to small landscaping touches, we’ll see what we can do.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a href="contact.html" class="btn btn-primary">Get a Free Service Quote</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    © 2025 RM Gutters, LLC · Veteran Owned · Abilene, TX · Venmo: @rmgutters ·
+    Email: <a href="mailto:ramking0913@gmail.com">ramking0913@gmail.com</a> · Phone: 682-445-9951
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+
+    if (menuOpen) {
+      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
+      hamburger.children[1].style.opacity = "0";
+      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
+    } else {
+      hamburger.children[0].style.transform = "none";
+      hamburger.children[1].style.opacity = "1";
+      hamburger.children[2].style.transform = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
