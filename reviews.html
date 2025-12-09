@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Reviews | RM Gutters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="RM Gutters Logo" />
+      <div>
+        <div class="logo-text-main">RM GUTTERS</div>
+        <div class="logo-text-sub">Veteran Owned • Abilene, TX</div>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li class="nav-item">
+          <a href="#" class="dropdown-toggle">More</a>
+          <div class="dropdown-menu">
+            <a href="community.html">Veterans & Outreach</a>
+            <a href="contact.html">Contact & Quotes</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="community.html">Veterans & Outreach</a>
+    <a href="contact.html">Contact & Quotes</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="section-inner">
+      <h1 class="section-title">Customer Reviews</h1>
+      <p class="section-tagline">Real feedback from homeowners we’ve helped in Abilene and nearby.</p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Name Here – City, TX</div>
+          <p>“Type your real 5-star review here when customers send them to you.”</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <div class="review-name">Name Here – City, TX</div>
+          <p>“Another review goes here. You can copy/paste from text messages or Facebook (with permission).”</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Name Here – City, TX</div>
+          <p>“Great communication, very professional, and the gutters & lights turned out awesome.”</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-name">Name Here – City, TX</div>
+          <p>“On time, respectful, and left everything cleaner than they found it. Highly recommend.”</p>
+        </div>
+      </div>
+
+      <p style="margin-top:18px;font-size:0.85rem;color:#a7bccd;">
+        As you collect real reviews on Facebook, Google, or text, you can replace these with actual names and quotes.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    © 2025 RM Gutters, LLC · Veteran Owned · Abilene, TX · Venmo: @rmgutters ·
+    Email: <a href="mailto:ramking0913@gmail.com">ramking0913@gmail.com</a> · Phone: 682-445-9951
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+
+    if (menuOpen) {
+      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
+      hamburger.children[1].style.opacity = "0";
+      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
+    } else {
+      hamburger.children[0].style.transform = "none";
+      hamburger.children[1].style.opacity = "1";
+      hamburger.children[2].style.transform = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
