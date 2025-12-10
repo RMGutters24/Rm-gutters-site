@@ -1,323 +1,478 @@
-<style>
-  /* RM Gutters – Veterans & Community Outreach (Patriotic Version) */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterans & Community Outreach | RM Gutters</title>
 
-  .veterans-page {
-    position: relative;
-    overflow: hidden;
-    padding: 3rem 1.25rem 4rem;
-    margin: 0;
-    color: #ffffff;
-  }
+  <style>
+    /* ===============================
+       GLOBAL
+    ================================ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* FULL PAGE FLAG STRIPES IN THE BACKGROUND */
-  .veterans-page::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image:
-      repeating-linear-gradient(
-        -18deg,
-        rgba(178,34,52,0.75) 0 32px,
-        rgba(255,255,255,0.92) 32px 64px,
-        rgba(10,49,97,0.9) 64px 96px
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #020814;
+      color: #ffffff;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ===============================
+       NAV BAR WITH DROPDOWN
+    ================================ */
+    .rm-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #020c18;
+      border-bottom: 1px solid rgba(0,194,215,0.4);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rm-nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rm-logo-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #00c2d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #001219;
+    }
+
+    .rm-nav-text-main {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+    }
+
+    .rm-nav-text-sub {
+      font-size: 0.65rem;
+      opacity: 0.8;
+    }
+
+    .rm-toggle {
+      border: none;
+      background: none;
+      color: #ffffff;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    .rm-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #020814;
+      width: 220px;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.95);
+      border-left: 1px solid rgba(0,194,215,0.4);
+      border-bottom: 1px solid rgba(0,194,215,0.4);
+    }
+
+    .rm-menu a {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #e1f5ff;
+    }
+
+    .rm-menu a:hover {
+      background: #00c2d7;
+      color: #001219;
+    }
+
+    .rm-menu.show { display: flex; }
+
+    /* ===============================
+       PAGE BACKGROUND – LOUD FLAG
+    ================================ */
+    .veterans-page {
+      position: relative;
+      min-height: 100vh;
+      padding: 3rem 1.25rem 4rem;
+      overflow: hidden;
+    }
+
+    /* Big waving flag stripes */
+    .veterans-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          -18deg,
+          #B22234 0 40px,
+          #FFFFFF 40px 80px,
+          #0A3161 80px 120px
+        );
+      background-size: 280% 280%;
+      animation: pageFlagWave 20s ease-in-out infinite;
+      opacity: 0.65; /* louder flag */
+      z-index: -3;
+    }
+
+    @keyframes pageFlagWave {
+      0%   { background-position: 0% 40%; }
+      50%  { background-position: 100% 60%; }
+      100% { background-position: 0% 40%; }
+    }
+
+    /* Star sparkle overlay */
+    .veterans-page::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 8% 12%, rgba(255,255,255,0.4) 0 1px, transparent 1px 5px),
+        radial-gradient(circle at 60% 30%, rgba(255,255,255,0.35) 0 1px, transparent 1px 5px),
+        radial-gradient(circle at 25% 70%, rgba(255,255,255,0.3) 0 1px, transparent 1px 5px);
+      background-size: 40px 40px, 55px 55px, 50px 50px;
+      opacity: 0.2;
+      mix-blend-mode: screen;
+      z-index: -2;
+    }
+
+    .veterans-main {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ===============================
+       FLAG HEADER PANEL
+    ================================ */
+    .veterans-header {
+      position: relative;
+      padding: 2.3rem 2rem;
+      border-radius: 22px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 28px 60px rgba(0,0,0,0.9);
+    }
+
+    .veterans-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          -15deg,
+          #B22234 0 36px,
+          #FFFFFF 36px 72px,
+          #0A3161 72px 108px
+        );
+      background-size: 250% 250%;
+      animation: headerFlagWave 18s ease-in-out infinite;
+      opacity: 0.9;
+      z-index: 0;
+    }
+
+    .veterans-header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom right,
+        rgba(10,49,97,0.96),
+        rgba(2,8,20,0.98)
       );
-    background-size: 220% 220%;
-    animation: pageFlagWave 26s ease-in-out infinite;
-    opacity: 0.28;            /* adjust higher for louder flag */
-    z-index: -2;
-  }
+      z-index: 1;
+    }
 
-  @keyframes pageFlagWave {
-    0%   { background-position: 0% 40%; }
-    50%  { background-position: 100% 60%; }
-    100% { background-position: 0% 40%; }
-  }
+    @keyframes headerFlagWave {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 65%; }
+      100% { background-position: 0% 50%; }
+    }
 
-  /* DARK OVERLAY SO CONTENT IS STILL READABLE */
-  .veterans-page::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle at top, rgba(0,0,0,0.55), rgba(0,0,0,0.9));
-    z-index: -1;
-  }
+    .veterans-header h1,
+    .veterans-header p {
+      position: relative;
+      z-index: 2;
+    }
 
-  .veterans-main {
-    position: relative;
-    z-index: 1;
-    max-width: 960px;
-    margin: 0 auto;
-  }
+    .veterans-header h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-  /* FLAG HEADER – AMERICAN FLAG BEHIND PANEL */
-  .veterans-header {
-    position: relative;
-    padding: 2.3rem 2rem;
-    border-radius: 22px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: 0 25px 55px rgba(0,0,0,0.7);
-  }
+    .veterans-header p {
+      margin-top: 0.9rem;
+      max-width: 640px;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
 
-  .veterans-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      repeating-linear-gradient(
-        -15deg,
-        #B22234 0 36px,
-        #ffffff 36px 72px,
-        #0A3161 72px 108px
+    /* ===============================
+       DIVIDER STRIPE
+    ================================ */
+    .flag-divider {
+      height: 7px;
+      border-radius: 999px;
+      margin: 1.8rem 0 1.5rem;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.9);
+      background: linear-gradient(
+        to right,
+        #B22234,
+        #FFFFFF,
+        #0A3161,
+        #00c2ff,
+        #B22234
       );
-    background-size: 220% 220%;
-    animation: headerFlagWave 18s ease-in-out infinite;
-    opacity: 0.55;
-    z-index: 0;
-  }
+    }
 
-  .veterans-header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom right,
-      rgba(10,49,97,0.95),
-      rgba(2,8,20,0.98)
-    );
-    z-index: 1;
-  }
+    /* ===============================
+       CONTENT CARDS – BLUE / RED
+    ================================ */
+    .veterans-card {
+      border-radius: 18px;
+      padding: 1.7rem 1.5rem;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(7px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.95);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
 
-  @keyframes headerFlagWave {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 60%; }
-    100% { background-position: 0% 50%; }
-  }
+    .card-blue {
+      background:
+        radial-gradient(circle at top left, rgba(0,194,255,0.32), transparent 60%),
+        rgba(2,8,20,0.96);
+      border-top: 4px solid #00c2ff;
+    }
 
-  .veterans-header h1,
-  .veterans-header p {
-    position: relative;
-    z-index: 2;
-  }
+    .card-red {
+      background:
+        radial-gradient(circle at bottom right, rgba(255,96,96,0.32), transparent 60%),
+        rgba(2,8,20,0.96);
+      border-top: 4px solid #ff4b5c;
+    }
 
-  .veterans-header h1 {
-    font-size: 2.1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+    .veterans-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.3rem;
+    }
 
-  .veterans-header p {
-    margin-top: 0.9rem;
-    max-width: 640px;
-    line-height: 1.7;
-    font-size: 1rem;
-  }
+    .card-blue h2 { color: #00c2ff; }
+    .card-red  h2 { color: #ff9aa4; }
 
-  /* DIVIDER STRIPE */
-  .flag-divider {
-    height: 7px;
-    border-radius: 999px;
-    margin: 1.7rem 0 1.4rem;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.8);
-    background: linear-gradient(to right, #B22234, #ffffff, #0A3161, #B22234);
-  }
+    .veterans-card p {
+      margin: 0.25rem 0 0;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: #e2f5ff;
+    }
 
-  /* CONTENT CARDS – BLUE & RED VARIANTS */
-  .veterans-card {
-    border-radius: 18px;
-    padding: 1.7rem 1.5rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 18px 38px rgba(0,0,0,0.85);
-    border: 1px solid rgba(255,255,255,0.16);
-    backdrop-filter: blur(6px);
-  }
+    .veterans-card p strong { color: #ffffff; }
 
-  .card-blue {
-    background:
-      radial-gradient(circle at top left, rgba(0,194,255,0.2), transparent 55%),
-      rgba(2,8,20,0.96);
-    border-top: 4px solid #00c2ff;
-  }
+    /* ===============================
+       COMMUNITY OUTREACH TITLE
+    ================================ */
+    .community-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin: 0.7rem 0 0.25rem;
+    }
 
-  .card-red {
-    background:
-      radial-gradient(circle at bottom right, rgba(255,80,80,0.24), transparent 55%),
-      rgba(2,8,20,0.96);
-    border-top: 4px solid #ff4b5c;
-  }
+    .community-sub {
+      margin: 0 0 1.2rem;
+      font-size: 0.98rem;
+      opacity: 0.94;
+    }
 
-  .veterans-card h2 {
-    margin-top: 0;
-    margin-bottom: 0.4rem;
-    font-size: 1.3rem;
-  }
+    /* ===============================
+       DONATE BUTTON
+    ================================ */
+    .btn-row {
+      text-align: center;
+      margin: 1.9rem 0 2.5rem;
+    }
 
-  .card-blue h2 { color: #00c2ff; }
-  .card-red  h2 { color: #ff9090; }
+    .veterans-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 1rem 2.3rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #0A3161, #00c2ff, #B22234);
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 0 22px 55px rgba(0,0,0,1);
+      transition: all 0.25s ease;
+    }
 
-  .veterans-card p {
-    margin: 0.25rem 0 0;
-    font-size: 0.98rem;
-    line-height: 1.8;
-    color: #e2f5ff;
-  }
+    .veterans-btn span.emoji { font-size: 1.2rem; }
 
-  .veterans-card p strong { color: #ffffff; }
+    .veterans-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 28px 65px rgba(0,0,0,1);
+    }
 
-  /* SECTION TITLE FOR COMMUNITY OUTREACH */
-  .community-title {
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin: 0.7rem 0 0.2rem;
-  }
+    /* ===============================
+       CALLOUT
+    ================================ */
+    .veterans-callout {
+      margin-top: 2rem;
+      background: linear-gradient(135deg, #0A3161, #0A3161 55%, #B22234);
+      padding: 2rem 1.7rem;
+      border-radius: 22px;
+      box-shadow: 0 28px 65px rgba(0,0,0,1);
+    }
 
-  .community-sub {
-    margin: 0 0 1.2rem;
-    font-size: 0.98rem;
-    opacity: 0.92;
-  }
+    .veterans-callout h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1.35rem;
+    }
 
-  /* DONATE BUTTON – BRIGHT PATRIOTIC PILL */
-  .btn-row {
-    text-align: center;
-    margin: 1.8rem 0 2.4rem;
-  }
+    .veterans-callout p {
+      margin: 0;
+      font-size: 0.97rem;
+      line-height: 1.8;
+      max-width: 660px;
+    }
 
-  .veterans-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.95rem 2.1rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #0A3161, #00c2ff, #B22234);
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    font-size: 0.95rem;
-    text-decoration: none;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.9);
-    transition: all 0.25s ease;
-  }
+    /* ===============================
+       FOOTER
+    ================================ */
+    .veterans-footer {
+      margin-top: 2.1rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+      text-align: center;
+    }
 
-  .veterans-btn span.emoji { font-size: 1.2rem; }
+    .veterans-footer a { color: #00c2ff; }
 
-  .veterans-btn:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 20px 45px rgba(0,0,0,1);
-  }
+    @media (min-width: 768px) {
+      .veterans-page   { padding: 3.5rem 2rem 4.5rem; }
+      .veterans-header h1 { font-size: 2.4rem; }
+    }
+  </style>
+</head>
 
-  /* CALLOUT BOX – STRONG RED/BLUE GRADIENT */
-  .veterans-callout {
-    margin-top: 2rem;
-    background: linear-gradient(135deg, #0A3161, #0A3161 55%, #B22234);
-    padding: 2rem 1.7rem;
-    border-radius: 22px;
-    box-shadow: 0 26px 55px rgba(0,0,0,0.95);
-  }
+<body>
+  <!-- Turquoise RM Gutters nav with dropdown -->
+  <header class="rm-nav">
+    <div class="rm-nav-left">
+      <div class="rm-logo-box">RM</div>
+      <div>
+        <div class="rm-nav-text-main">RM GUTTERS</div>
+        <div class="rm-nav-text-sub">Veteran Owned • Abilene, TX</div>
+      </div>
+    </div>
+    <button class="rm-toggle" aria-label="Toggle menu"
+            onclick="document.querySelector('.rm-menu').classList.toggle('show')">
+      ☰
+    </button>
+    <nav class="rm-menu">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="community.html">Veterans & Outreach</a>
+    </nav>
+  </header>
 
-  .veterans-callout h3 {
-    margin: 0 0 0.45rem;
-    font-size: 1.35rem;
-  }
+  <section class="veterans-page">
+    <div class="veterans-main">
+      <header class="veterans-header">
+        <h1>Veterans &amp; Community Outreach</h1>
+        <p>
+          This part of RM Gutters is all about taking care of the people who took care of us.
+          We want Veterans — and anyone needing a second chance — to feel seen, welcomed,
+          and supported the moment they land here.
+        </p>
+      </header>
 
-  .veterans-callout p {
-    margin: 0;
-    font-size: 0.97rem;
-    line-height: 1.8;
-    max-width: 660px;
-  }
+      <div class="flag-divider"></div>
 
-  .veterans-footer {
-    margin-top: 2rem;
-    font-size: 0.8rem;
-    opacity: 0.75;
-    text-align: center;
-  }
+      <div class="veterans-card card-blue">
+        <h2>Our Mission</h2>
+        <p>
+          Life after service isn’t always simple. RM Gutters gives back by helping local
+          Veterans and community members who are struggling with basic needs, emergencies,
+          or finding support. Nobody should feel like they’re starting over alone.
+        </p>
+      </div>
 
-  .veterans-footer a { color: #00c2ff; }
+      <div class="veterans-card card-red">
+        <h2>How Donations Help</h2>
+        <p>
+          100% of donated funds stay right here in our area — helping with fuel, food,
+          emergency bills, hotel nights in a crisis, and other real-life needs.
+          <strong>Every dollar stays in our community.</strong>
+        </p>
+      </div>
 
-  @media (min-width: 768px) {
-    .veterans-page { padding: 3.5rem 2rem 4.5rem; }
-    .veterans-header h1 { font-size: 2.3rem; }
-  }
-</style>
+      <div class="veterans-card card-blue">
+        <h2>Transparency</h2>
+        <p>
+          RM Gutters is a veteran-owned small business (not a nonprofit). Donations are
+          voluntary and not tax-deductible — but they allow us to step in quickly when
+          someone in Abilene needs help. We’re committed to being honest about where
+          support goes and who it helps.
+        </p>
+      </div>
 
-<section class="veterans-page">
-  <div class="veterans-main">
-    <header class="veterans-header">
-      <h1>Veterans &amp; Community Outreach</h1>
-      <p>
-        This part of RM Gutters is all about taking care of the people who took care of us.
-        We want Veterans — and anyone needing a second chance — to feel seen, welcomed,
-        and supported the moment they land here.
+      <div class="btn-row">
+        <a class="veterans-btn" href="https://venmo.com/@rmgutters" target="_blank" rel="noopener">
+          <span class="emoji">💙</span>
+          <span>Donate via Venmo @rmgutters</span>
+        </a>
+      </div>
+
+      <h2 class="community-title">Community Outreach</h2>
+      <p class="community-sub">
+        Building a stronger Abilene — one job, one person, one second chance at a time.
       </p>
-    </header>
 
-    <div class="flag-divider"></div>
+      <div class="veterans-card card-red">
+        <h2>Our Abilene Mission</h2>
+        <p>
+          We believe everyone deserves a shot at starting over. RM Gutters is working
+          toward offering real work opportunities and second chances — especially for
+          people who feel written off because of their past. Hard work, honesty, and
+          accountability can change a life. We want to be part of that change here in Abilene.
+        </p>
+      </div>
 
-    <div class="veterans-card card-blue">
-      <h2>Our Mission</h2>
-      <p>
-        Life after service isn’t always simple. RM Gutters gives back by helping local
-        Veterans and community members who are struggling with basic needs, emergencies,
-        or finding support. Nobody should feel like they’re starting over alone.
-      </p>
+      <div class="veterans-callout">
+        <h3>Second Chances Start With Real Work</h3>
+        <p>
+          Our long-term goal is to grow RM Gutters into a place where we can bring people in,
+          train them, and help them get off the streets and back into steady work —
+          one ladder, one roofline, one job at a time. When you hire RM Gutters or support
+          our outreach, you’re helping build that future for Veterans and our community.
+        </p>
+      </div>
+
+      <div class="veterans-footer">
+        RM Gutters • Veteran Owned • Abilene, TX ·
+        <a href="index.html">Back to Main Site</a>
+      </div>
     </div>
-
-    <div class="veterans-card card-red">
-      <h2>How Donations Help</h2>
-      <p>
-        100% of donated funds stay right here in our area — helping with fuel, food,
-        emergency bills, hotel nights in a crisis, and other real-life needs.
-        <strong>Every dollar stays in our community.</strong>
-      </p>
-    </div>
-
-    <div class="veterans-card card-blue">
-      <h2>Transparency</h2>
-      <p>
-        RM Gutters is a veteran-owned small business (not a nonprofit). Donations are
-        voluntary and not tax-deductible — but they allow us to step in quickly when
-        someone in Abilene needs help. We’re committed to being honest about where
-        support goes and who it helps.
-      </p>
-    </div>
-
-    <div class="btn-row">
-      <a class="veterans-btn" href="https://venmo.com/@rmgutters" target="_blank" rel="noopener">
-        <span class="emoji">💙</span>
-        <span>Donate via Venmo @rmgutters</span>
-      </a>
-    </div>
-
-    <h2 class="community-title">Community Outreach</h2>
-    <p class="community-sub">
-      Building a stronger Abilene — one job, one person, one second chance at a time.
-    </p>
-
-    <div class="veterans-card card-red">
-      <h2>Our Abilene Mission</h2>
-      <p>
-        We believe everyone deserves a shot at starting over. RM Gutters is working
-        toward offering real work opportunities and second chances — especially for
-        people who feel written off because of their past. Hard work, honesty, and
-        accountability can change a life. We want to be part of that change here in Abilene.
-      </p>
-    </div>
-
-    <div class="veterans-callout">
-      <h3>Second Chances Start With Real Work</h3>
-      <p>
-        Our long-term goal is to grow RM Gutters into a place where we can bring people in,
-        train them, and help them get off the streets and back into steady work —
-        one ladder, one roofline, one job at a time. When you hire RM Gutters or support
-        our outreach, you’re helping build that future for Veterans and our community.
-      </p>
-    </div>
-
-    <div class="veterans-footer">
-      RM Gutters • Veteran Owned • Abilene, TX ·
-      <a href="https://rmgutters24.github.io/Rm-gutters-site/">Back to Main Site</a>
-    </div>
-  </div>
-</section>
+  </section>
+</body>
+</html>
