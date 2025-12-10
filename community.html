@@ -1,184 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Veterans & Community Outreach | RM Gutters</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png" />
-</head>
-<body>
+/* =====================================================
+   RM GUTTERS — VETERANS & OUTREACH PAGE (FULL CSS)
+   Red • White • Blue + Subtle Waving Flag Background
+   ===================================================== */
 
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo-wrap">
-      <img src="logo.png" alt="RM Gutters Logo" />
-      <div>
-        <div class="logo-text-main">RM GUTTERS</div>
-        <div class="logo-text-sub">Veteran Owned • Abilene, TX</div>
-      </div>
-    </a>
+/* ================================
+   PAGE WRAPPER
+   ================================ */
+.veterans-page {
+  position: relative;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li class="nav-item">
-          <a href="#" class="dropdown-toggle">More</a>
-          <div class="dropdown-menu">
-            <a href="community.html">Veterans & Outreach</a>
-            <a href="contact.html">Contact & Quotes</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
+/* Subtle Waving Flag Overlay */
+.veterans-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(178, 34, 52, 0.06),
+    rgba(255, 255, 255, 0.06),
+    rgba(10, 49, 97, 0.06)
+  );
+  background-size: 400% 400%;
+  animation: flagWave 18s ease-in-out infinite;
+  z-index: 0;
+}
 
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
+/* Keep content above overlay */
+.veterans-page > * {
+  position: relative;
+  z-index: 1;
+}
 
-  <div id="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="community.html">Veterans & Outreach</a>
-    <a href="contact.html">Contact & Quotes</a>
-  </div>
-</header>
+/* Waving animation */
+@keyframes flagWave {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-<main>
-  <section>
-    <div class="section-inner">
-      <h1 class="section-title">Supporting Veterans in Need</h1>
-      <p class="section-tagline">Helping our brothers & sisters who served — right here in Abilene.</p>
+/* ================================
+   HEADER
+   ================================ */
+.veterans-header {
+  background-color: #0A3161;
+  color: #FFFFFF;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>Our Mission</h3>
-          <p>
-            Life after service isn’t always simple. RM Gutters gives back by helping local Veterans
-            who are struggling with basic needs, emergencies, or finding support.
-          </p>
-        </div>
+.veterans-header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
-        <div class="card">
-          <h3>How Donations Help</h3>
-          <p>
-            100% of donated funds go directly toward helping Veterans in Abilene — including food,
-            gas, bills, and emergency needs.
-          </p>
-        </div>
+.veterans-header p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
 
-        <div class="card">
-          <h3>Transparency</h3>
-          <p>
-            RM Gutters is a veteran-owned small business (not a nonprofit). Donations are voluntary
-            and not tax-deductible — but every dollar helps someone local.
-          </p>
-        </div>
-      </div>
+/* ================================
+   CONTENT SECTIONS
+   ================================ */
+.veterans-section {
+  background-color: #FFFFFF;
+  border-left: 6px solid #B22234;
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
 
-      <div style="text-align:center;margin-top:18px;">
-        <a href="https://venmo.com/rmgutters"
-           class="btn btn-primary">
-          💙 Donate via Venmo @rmgutters
-        </a>
-      </div>
-    </div>
-  </section>
+.veterans-section h2 {
+  color: #0A3161;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
 
-  <section>
-    <div class="section-inner">
-      <h2 class="section-title">Community Outreach</h2>
-      <p class="section-tagline">
-        Building a stronger Abilene — one job, one person, one second chance at a time.
-      </p>
+.veterans-section p {
+  color: #333333;
+  line-height: 1.7;
+  font-size: 1rem;
+}
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>Our Abilene Mission</h3>
-          <p>
-            We believe everyone deserves a shot at starting over. RM Gutters is working toward
-            offering real opportunities for people trying to get off the streets.
-          </p>
-        </div>
+/* ================================
+   DIVIDER
+   ================================ */
+.veterans-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #B22234;
+  margin: 15px 0 20px;
+  border-radius: 3px;
+}
 
-        <div class="card">
-          <h3>Second Chance Employment</h3>
-          <p>
-            Our plan includes hiring individuals who need a fresh start — giving them work,
-            training, stability, and support.
-          </p>
-        </div>
+/* ================================
+   LISTS
+   ================================ */
+.veterans-section ul {
+  padding-left: 20px;
+  margin-top: 15px;
+}
 
-        <div class="card">
-          <h3>Training Program</h3>
-          <p>
-            As the business grows, a formal work program will provide skills training, rides to job
-            sites, tools, and mentorship.
-          </p>
-        </div>
+.veterans-section ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
 
-        <div class="card">
-          <h3>Community Resources</h3>
-          <p>
-            We work with churches, shelters, and outreach groups to connect people to support,
-            meals, and emergency help.
-          </p>
-        </div>
+/* ================================
+   BUTTONS
+   ================================ */
+.veterans-btn {
+  display: inline-block;
+  background-color: #0A3161;
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
 
-        <div class="card">
-          <h3>How You Can Help</h3>
-          <p>
-            Booking our services directly fuels this outreach. Donations support supplies, food,
-            basic needs, and future employment opportunities.
-          </p>
-        </div>
-      </div>
+.veterans-btn:hover {
+  background-color: #B22234;
+  transform: translateY(-2px);
+}
 
-      <div style="text-align:center;margin-top:20px;">
-        <a href="https://venmo.com/rmgutters"
-           class="btn btn-outline">
-          💙 Support Community Outreach
-        </a>
-      </div>
-    </div>
-  </section>
-</main>
+/* ================================
+   CALLOUT / MISSION BOX
+   ================================ */
+.veterans-callout {
+  background: linear-gradient(
+    135deg,
+    #0A3161,
+    #0A3161 60%,
+    #B22234
+  );
+  color: #FFFFFF;
+  padding: 35px;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+}
 
-<footer>
-  <div class="footer-inner">
-    © 2025 RM Gutters, LLC · Veteran Owned · Abilene, TX · Venmo: @rmgutters ·
-    Email: <a href="mailto:ramking0913@gmail.com">ramking0913@gmail.com</a> · Phone: 682-445-9951
-  </div>
-</footer>
+.veterans-callout h3 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  let menuOpen = false;
+.veterans-callout p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
 
-  hamburger.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+/* ================================
+   FLAG STRIPE (OPTIONAL)
+   ================================ */
+.flag-stripe {
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #B22234,
+    #FFFFFF,
+    #0A3161
+  );
+  margin: 30px 0;
+  border-radius: 4px;
+}
 
-    if (menuOpen) {
-      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
-      hamburger.children[1].style.opacity = "0";
-      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
-    } else {
-      hamburger.children[0].style.transform = "none";
-      hamburger.children[1].style.opacity = "1";
-      hamburger.children[2].style.transform = "none";
-    }
-  });
-</script>
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 768px) {
+  .veterans-header h1 {
+    font-size: 2.1rem;
+  }
 
-</body>
-</html>
+  .veterans-section {
+    padding: 25px 20px;
+  }
+}
