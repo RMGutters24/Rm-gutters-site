@@ -5,78 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | RM Gutters</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    .contact-grid {
-      display: grid;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1.3fr 1fr;
-      }
-    }
-    .contact-card {
-      background: #ffffff;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
-    }
-    .contact-card h2 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
-    .contact-card p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-    }
-    .contact-card strong {
-      color: #0f766e;
-    }
-    form label {
-      display: block;
-      margin-bottom: 0.25rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 0.5rem 0.6rem;
-      margin-bottom: 0.75rem;
-      border-radius: 0.4rem;
-      border: 1px solid #d1d5db;
-      font-size: 0.95rem;
-    }
-    form button {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      border-radius: 999px;
-      border: none;
-      background: #0f766e;
-      color: white;
-      font-weight: 700;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="logo">RM Gutters</a>
-
+      <a href="index.html" class="logo">RM GUTTERS</a>
       <button class="nav-toggle" aria-label="Toggle navigation"
         onclick="document.body.classList.toggle('nav-open')">
         ☰
       </button>
-
       <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -90,7 +28,6 @@
         </ul>
       </nav>
     </div>
-
     <nav class="mobile-nav">
       <ul class="mobile-nav-links">
         <li><a href="index.html">Home</a></li>
@@ -105,9 +42,8 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="page-wrapper">
-    <section style="margin: 2rem 0;">
+    <section class="section-card">
       <h1>Contact</h1>
       <p>
         Have a question, want a quote, or ready to get on the schedule?
@@ -118,16 +54,16 @@
     <section class="contact-grid">
       <div class="contact-card">
         <h2>Call or Text</h2>
-        <p><strong>Phone:</strong> (682) 445-9951</p>
+        <p><strong>Phone:</strong> <a href="tel:16824459951">(682) 445-9951</a></p>
         <p>Texting pictures of your gutters, junk, or project is the fastest way to get a quote.</p>
 
-        <h2 style="margin-top: 1.5rem;">Service Area</h2>
+        <h2 style="margin-top:1.5rem;">Service Area</h2>
         <p>Based in Texas, serving nearby surrounding communities.</p>
       </div>
 
       <div class="contact-card">
         <h2>Contact Form</h2>
-        <!-- You can hook this up to Formspree or another service later -->
+        <!-- Visual-only form (no backend yet) -->
         <form>
           <label for="name">Name</label>
           <input id="name" type="text" placeholder="Your name" />
@@ -143,7 +79,7 @@
 
           <button type="button">Send (placeholder)</button>
         </form>
-        <p style="font-size: 0.8rem; color:#6b7280; margin-top:0.5rem;">
+        <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.4rem;">
           This form is a visual placeholder. When you’re ready, we can hook it up so it emails you directly.
         </p>
       </div>
