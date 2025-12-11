@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | RM Gutters</title>
+  <title>Gallery | RM Gutters</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     .page-wrapper {
@@ -11,35 +11,33 @@
       margin: 0 auto;
       padding: 1.5rem;
     }
-    .section-card {
-      background: #ffffff;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
     }
-    .section-card h2 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
+    @media (min-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
-    .price-row {
+    .gallery-item {
+      background: #0b1120;
+      color: #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .gallery-placeholder {
+      height: 140px;
+      border-radius: 0.5rem;
+      background: #1e293b;
       display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 0.4rem 0;
-      font-size: 0.95rem;
-    }
-    .price-row:last-child {
-      border-bottom: none;
-    }
-    .price-row span:last-child {
-      font-weight: 600;
-      color: #0f766e;
-    }
-    .disclaimer {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-top: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -59,8 +57,8 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html" aria-current="page">Pricing</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="community.html">Veterans & Outreach</a></li>
           <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
@@ -73,8 +71,8 @@
       <ul class="mobile-nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html" aria-current="page">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="community.html">Veterans & Outreach</a></li>
         <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
@@ -86,84 +84,43 @@
   <!-- MAIN CONTENT -->
   <main class="page-wrapper">
     <section style="margin: 2rem 0;">
-      <h1>Pricing</h1>
+      <h1>Gallery</h1>
       <p>
-        Every home is different, but these ranges give you a clear idea of what to expect.
-        Text us pictures for a fast custom quote.
+        A look at some of the homes we’ve helped with gutter cleaning, repairs, lights, and junk removal.
       </p>
     </section>
 
-    <section class="section-card">
-      <h2>Gutter Cleaning</h2>
-      <div class="price-row">
-        <span>Single-story home</span>
-        <span>Typically $100–$180</span>
+    <section>
+      <h2>Before & After Highlights</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Gutter cleaning before/after</div>
+          <p>Clogged gutters cleared and flowing again.</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Holiday lights roofline</div>
+          <p>Clean, even holiday lights along the roofline.</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Junk removal load</div>
+          <p>Old furniture and trash hauled away in one trip.</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Downspout repair</div>
+          <p>Loose sections re-secured and sealed.</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Two-story roofline</div>
+          <p>High roofline gutters safely cleaned.</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">Yard clean-up</div>
+          <p>Brush and debris removed for a clean look.</p>
+        </div>
       </div>
-      <div class="price-row">
-        <span>Two-story home</span>
-        <span>Typically $150–$260</span>
-      </div>
-      <div class="price-row">
-        <span>Heavy debris / extra dirty</span>
-        <span>Additional $25–$75</span>
-      </div>
-      <p class="disclaimer">
-        Price depends on roofline complexity, gutter length, and how packed the gutters are.
-      </p>
-    </section>
-
-    <section class="section-card">
-      <h2>Gutter Repairs</h2>
-      <div class="price-row">
-        <span>Minor leak reseal / corner repair</span>
-        <span>$40–$90 each</span>
-      </div>
-      <div class="price-row">
-        <span>Re-attaching loose sections</span>
-        <span>$60–$150+</span>
-      </div>
-      <p class="disclaimer">
-        We’ll always walk you through what we see and get your approval before extra repair work.
-      </p>
-    </section>
-
-    <section class="section-card">
-      <h2>Gutter Guard Installation</h2>
-      <div class="price-row">
-        <span>Standard guard installation</span>
-        <span>Custom per-foot pricing</span>
-      </div>
-      <p class="disclaimer">
-        Guard pricing depends on the style of guard, total footage, and current condition of your gutters.
-      </p>
-    </section>
-
-    <section class="section-card">
-      <h2>Holiday & Christmas Lights</h2>
-      <div class="price-row">
-        <span>Basic single-story roofline install</span>
-        <span>Typically $250–$450</span>
-      </div>
-      <div class="price-row">
-        <span>Two-story / peaks & trim</span>
-        <span>$400–$800+</span>
-      </div>
-      <div class="price-row">
-        <span>Light removal (after season)</span>
-        <span>½ installation cost</span>
-      </div>
-      <p class="disclaimer">
-        Ask about bundled pricing if you also book gutter cleaning with your light install.
-      </p>
-    </section>
-
-    <section class="section-card">
-      <h2>Junk Removal & Labor Help</h2>
-      <p>
-        We now offer junk removal and labor-only help for moving, clean-outs, and small projects.
-      </p>
-      <p>
-        <a href="junk-labor.html">View full Junk Removal & Labor pricing →</a>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #6b7280;">
+        Real project photos can be added here as you build your portfolio. For now, this section explains
+        the types of before-and-after results customers can expect.
       </p>
     </section>
   </main>
