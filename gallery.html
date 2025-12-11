@@ -5,54 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | RM Gutters</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .page-wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    .gallery-grid {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    @media (min-width: 768px) {
-      .gallery-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-    .gallery-item {
-      background: #0b1120;
-      color: #e5e7eb;
-      border-radius: 0.75rem;
-      padding: 0.75rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    .gallery-placeholder {
-      height: 140px;
-      border-radius: 0.5rem;
-      background: #1e293b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="logo">RM Gutters</a>
-
+      <a href="index.html" class="logo">RM GUTTERS</a>
       <button class="nav-toggle" aria-label="Toggle navigation"
         onclick="document.body.classList.toggle('nav-open')">
         ☰
       </button>
-
       <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -66,7 +28,6 @@
         </ul>
       </nav>
     </div>
-
     <nav class="mobile-nav">
       <ul class="mobile-nav-links">
         <li><a href="index.html">Home</a></li>
@@ -81,20 +42,19 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="page-wrapper">
-    <section style="margin: 2rem 0;">
+    <section class="section-card">
       <h1>Gallery</h1>
       <p>
         A look at some of the homes we’ve helped with gutter cleaning, repairs, lights, and junk removal.
       </p>
     </section>
 
-    <section>
+    <section class="section-card">
       <h2>Before & After Highlights</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <div class="gallery-placeholder">Gutter cleaning before/after</div>
+          <div class="gallery-placeholder">Gutter cleaning before / after</div>
           <p>Clogged gutters cleared and flowing again.</p>
         </div>
         <div class="gallery-item">
@@ -118,9 +78,8 @@
           <p>Brush and debris removed for a clean look.</p>
         </div>
       </div>
-      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #6b7280;">
-        Real project photos can be added here as you build your portfolio. For now, this section explains
-        the types of before-and-after results customers can expect.
+      <p style="margin-top:1.2rem;font-size:0.88rem;color:#9ca3af;">
+        As you build your real photo collection, you can replace these placeholders with your own before-and-after shots.
       </p>
     </section>
   </main>
