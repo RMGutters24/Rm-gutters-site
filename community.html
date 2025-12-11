@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Veterans & Outreach | RM Gutters</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .donate-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 999px;
+      background: #00c8d4;
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .donate-button:hover {
+      background: #0096a3;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+    .donate-button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -84,9 +110,20 @@
         Every gutter cleaned, every light install, and every junk haul helps support a small
         local business with a bigger purpose.
       </p>
-      <p style="margin-top:0.5rem;">
+      <p style="margin-top: 0.5rem;">
         <a href="contact.html">Book a service or reach out →</a>
       </p>
+
+      <!-- 💙 Here’s your Donate button -->
+      <a
+        href="https://www.venmo.com/u/rmgutters"
+        class="donate-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Donate to Support Veterans
+      </a>
+
     </section>
   </main>
 </body>
