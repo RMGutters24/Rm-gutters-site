@@ -1,92 +1,252 @@
----
-layout: default
-title: Junk Removal & Labor Help
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junk Removal & Labor Help | RM Gutters</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-specific styling to make this look clean even if styles.css is simple */
+    body {
+      background: #f4f7f8;
+      color: #111827;
+    }
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .page-heading {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .page-heading h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0f766e;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid #0f766e;
+      background: #ecfdf5;
+      color: #0f766e;
+    }
+    .section-card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+    .section-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .pricing-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    .price-card {
+      border-radius: 0.9rem;
+      border: 1px solid #e5e7eb;
+      padding: 0.9rem 1rem;
+      background: linear-gradient(135deg, #ffffff, #f9fafb);
+    }
+    .price-card h3 {
+      margin: 0 0 0.25rem;
+    }
+    .price {
+      font-weight: 700;
+      color: #0f766e;
+      margin: 0.25rem 0;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+    .disclaimer {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+    .cta-box {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: white;
+      text-align: center;
+    }
+    .cta-box h2 {
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .cta-phone a {
+      color: #ecfeff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
 
-# Junk Removal & Labor Help
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">RM Gutters</a>
 
-RM Gutters doesn’t just take care of your roofline – we also help with junk removal and extra hands for heavy lifting, moving, and small projects. Straightforward pricing, honest work, and respectful service every time.
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        onclick="document.body.classList.toggle('nav-open')">
+        ☰
+      </button>
 
-Locally Owned  
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="community.html">Veterans & Outreach</a></li>
+          <li><a href="junk-labor.html" aria-current="page">Junk Removal & Labor Help</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-Honest Pricing  
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="community.html">Veterans & Outreach</a></li>
+        <li><a href="junk-labor.html" aria-current="page">Junk Removal & Labor Help</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-Same-Week Availability  
+  <!-- MAIN CONTENT -->
+  <main class="page-wrapper">
+    <header class="page-heading">
+      <h1>Junk Removal & Labor Help</h1>
+      <p>
+        We haul the junk, do the lifting, and handle the dirty work so you don’t have to.
+        Straightforward prices, veteran-owned service, and same-week availability when possible.
+      </p>
+      <div class="badge-row">
+        <div class="badge">Locally Owned</div>
+        <div class="badge">Honest Pricing</div>
+        <div class="badge">Second-Chance Friendly</div>
+      </div>
+    </header>
 
----
+    <section class="section-card">
+      <h2>Junk Removal Pricing</h2>
+      <p>
+        Perfect for old furniture, broken appliances, construction debris, yard waste, and general household junk.
+        We load it, haul it, and handle the dump run for you.
+      </p>
 
-## Junk Removal
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Single Item / Curbside Pickup</h3>
+          <p class="price">Starting at $60</p>
+          <p class="note">One bulky item set by the curb, driveway, or garage.</p>
+        </div>
 
-**Pricing Guide**
+        <div class="price-card">
+          <h3>Small Load (Up to ¼ Truck)</h3>
+          <p class="price">Starting at $120</p>
+          <p class="note">Good for a few large items or several bags/boxes of junk.</p>
+        </div>
 
-Perfect for old furniture, broken appliances, construction debris, yard waste, and general household junk. We load it, haul it, and handle the dump run for you.
+        <div class="price-card">
+          <h3>Half Load (Up to ½ Truck)</h3>
+          <p class="price">Starting at $200</p>
+          <p class="note">Great for garage clean-outs, small remodel jobs, or move-out junk.</p>
+        </div>
 
-### Single Item / Curbside Pickup
+        <div class="price-card">
+          <h3>Full Load (Full Truck Bed)</h3>
+          <p class="price">$300–$350+</p>
+          <p class="note">For bigger cleanups. Final price depends on volume and material type.</p>
+        </div>
+      </div>
 
-**Starting at $60**
+      <p class="disclaimer">
+        Final pricing is based on how much space your items take in the truck, access to the junk,
+        and any dump/landfill fees. Text us photos for a fast estimate.
+      </p>
+    </section>
 
-Ideal for one bulky item set out by the curb, driveway, or garage.
+    <section class="section-card">
+      <h2>Labor-Only Help</h2>
+      <p>
+        Already have a truck or trailer, but need strong, reliable help?
+        Our labor-only option covers loading, unloading, moving heavy items, and small demo.
+      </p>
 
-### Small Load (Up to 1/4 Truck)
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Single Helper</h3>
+          <p class="price">$45 / hour</p>
+          <p class="note">1-hour minimum. Perfect for light moves and projects.</p>
+        </div>
 
-**Starting at $120**
+        <div class="price-card">
+          <h3>Two-Man Crew</h3>
+          <p class="price">$80 / hour</p>
+          <p class="note">1-hour minimum. Best for heavier items and faster load/unload.</p>
+        </div>
 
-Good for a few large items or several bags/boxes of junk.
+        <div class="price-card">
+          <h3>Half-Day Help</h3>
+          <p class="price">Starting at $280</p>
+          <p class="note">Up to 4 hours of help (one or two helpers) for bigger projects.</p>
+        </div>
 
-### Half Load (Up to 1/2 Truck)
+        <div class="price-card">
+          <h3>Full-Day Help</h3>
+          <p class="price">Custom Quote</p>
+          <p class="note">Tell us what you’re planning and we’ll build a flat rate.</p>
+        </div>
+      </div>
 
-**Starting at $200**
+      <p class="disclaimer">
+        Travel fees may apply outside our normal service area. Larger or specialized jobs may be quoted per project.
+      </p>
+    </section>
 
-Great for garage clean-outs, small remodel jobs, or move-out junk.
-
-### Full Load (Full Truck Bed)
-
-**$300–$350+**
-
-For big cleanups and larger jobs. Final price depends on volume and type of material.
-
-> Final pricing is based on how much space your items take in the truck, access to the junk, and any dump/landfill fees. We’re happy to provide a quick estimate by text if you send photos.
-
----
-
-## Labor-Only Help
-
-**Extra Hands When You Need Them**
-
-Need strong, reliable help but already have a truck or trailer? Our labor-only option covers loading, unloading, moving heavy items, small demo, and more.
-
-### Single Helper
-
-**$45/hour**
-
-1-hour minimum. Great for light moves, organizing, and assisting you with projects.
-
-### Two-Man Crew
-
-**$80/hour**
-
-1-hour minimum. Best for heavier items, faster load/unload, and small demo work.
-
-### Half-Day Help
-
-**Starting at $280**
-
-Up to 4 hours of help (one or two helpers). Perfect for big garage, shed, or yard projects.
-
-### Full-Day Help
-
-**Custom Quote**
-
-Full-day project? We’ll build a fair, flat-rate price for the job.
-
-> Travel fees may apply for locations outside our normal service area. Larger or specialized jobs may be quoted at a project rate instead of hourly.
-
----
-
-## Ready to Clean It Up?
-
-Text a photo of what you need hauled off or the work you need help with, and we’ll give you a fast estimate.
-
-**Call / Text: (682) 445-9951**
-
-Prefer the website? You can also reach us through our main [contact form](contact.html).
+    <section class="cta-box">
+      <h2>Ready to Clean It Up?</h2>
+      <p>Text a photo of what you need hauled off or the work you need help with, and we’ll send back a fast estimate.</p>
+      <p class="cta-phone">Call / Text: <a href="tel:16824459951">(682) 445-9951</a></p>
+      <p>Or use our <a href="contact.html" style="color:#ecfeff;">contact form</a> to get started.</p>
+    </section>
+  </main>
+</body>
+</html>
