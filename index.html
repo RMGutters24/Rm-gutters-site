@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RM Gutters | Veteran-Owned Gutter Cleaning & Exterior Services</title>
+  <title>RM Gutters | Veteran-Owned Gutter & Exterior Services</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- HEADER / NAV (SHARED ON ALL PAGES) -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="logo">RM Gutters</a>
+      <a href="index.html" class="logo">RM GUTTERS</a>
 
-      <!-- Mobile menu button -->
       <button class="nav-toggle" aria-label="Toggle navigation"
         onclick="document.body.classList.toggle('nav-open')">
         ☰
       </button>
 
-      <!-- Desktop navigation -->
       <nav class="main-nav">
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -34,7 +32,6 @@
       </nav>
     </div>
 
-    <!-- Mobile dropdown menu -->
     <nav class="mobile-nav">
       <ul class="mobile-nav-links">
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -49,18 +46,44 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="page-wrapper">
-    <section style="margin: 2rem 0;">
-      <h1>RM Gutters</h1>
-      <p>
-        Veteran-owned gutter cleaning, repair, and exterior services proudly serving our local Texas communities.
-        We show up on time, do it right the first time, and leave your home looking sharp.
-      </p>
-      <p><strong>Call / Text: (682) 445-9951</strong></p>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-eyebrow">Veteran-Owned • Local • Honest</div>
+        <h1>RM Gutters</h1>
+        <p>
+          Veteran-owned gutter cleaning, repair, and exterior services proudly serving our local Texas communities.
+          We show up on time, do it right the first time, and leave your home looking sharp.
+        </p>
+        <p style="margin-top:0.7rem;">
+          <span class="hero-highlight">Call / Text:</span>
+          <a href="tel:16824459951">(682) 445-9951</a>
+        </p>
+
+        <div style="margin-top:1.3rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <a href="contact.html" class="button-primary">Get a Quote</a>
+          <a href="pricing.html" class="button-outline">View Pricing</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <h2>Need Junk Removal or Extra Hands?</h2>
+        <p style="font-size:0.95rem;">
+          We now offer junk removal and labor help for moving, clean-outs, and small projects.
+        </p>
+        <a href="junk-labor.html" class="button-primary" style="margin-top:0.75rem;">
+          View Junk Removal & Labor Pricing
+        </a>
+        <p style="margin-top:0.9rem; font-size:0.82rem; color:#e5e7eb;">
+          Text photos for a fast estimate:
+          <strong>(682) 445-9951</strong>
+        </p>
+      </aside>
     </section>
 
-    <section style="margin: 2rem 0;">
+    <section class="section-card">
       <h2>What We Do</h2>
       <ul>
         <li>Gutter cleaning and flushing</li>
@@ -69,35 +92,22 @@
         <li>Christmas & holiday light installation and removal</li>
         <li><strong>New:</strong> Junk Removal & Labor-Only Help</li>
       </ul>
-      <p>
+      <p style="margin-top:0.75rem;">
         <a href="services.html">See all services →</a>
       </p>
     </section>
 
-    <section style="margin: 2rem 0;">
-      <h2>Need Junk Removal or Extra Hands?</h2>
-      <p>
-        We now offer junk removal and labor help for moving, clean-outs, and small projects.
-      </p>
-      <p>
-        <a href="junk-labor.html"
-           style="display:inline-block;padding:0.7rem 1.4rem;border-radius:999px;background:#0f766e;color:white;
-                  text-decoration:none;font-weight:700;">
-          View Junk Removal & Labor Pricing
-        </a>
-      </p>
-    </section>
-
-    <section style="margin: 2rem 0;">
+    <section class="section-card">
       <h2>Veteran-Owned & Second Chance Focused</h2>
       <p>
         RM Gutters was created to give others a second chance when some employers won’t even look past a background.
         We believe hard work, honesty, and respect can change lives and communities.
       </p>
-      <p>
-        <a href="community.html">Learn more about our Veterans & Outreach →</a>
+      <p style="margin-top:0.5rem;">
+        <a href="community.html">Learn more about our Veterans & Outreach mission →</a>
       </p>
     </section>
+
   </main>
 </body>
 </html>
