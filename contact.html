@@ -2,138 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact & Free Quote | RM Gutters</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | RM Gutters</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1.3fr 1fr;
+      }
+    }
+    .contact-card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+    .contact-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .contact-card p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+    .contact-card strong {
+      color: #0f766e;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      margin-bottom: 0.75rem;
+      border-radius: 0.4rem;
+      border: 1px solid #d1d5db;
+      font-size: 0.95rem;
+    }
+    form button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background: #0f766e;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo-wrap">
-      <img src="logo.png" alt="RM Gutters Logo" />
-      <div>
-        <div class="logo-text-main">RM GUTTERS</div>
-        <div class="logo-text-sub">Veteran Owned • Abilene, TX</div>
-      </div>
-    </a>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">RM Gutters</a>
 
-    <nav>
-      <ul>
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        onclick="document.body.classList.toggle('nav-open')">
+        ☰
+      </button>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="community.html">Veterans & Outreach</a></li>
+          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-        <li class="nav-item">
-          <a href="#" class="dropdown-toggle">More</a>
-          <div class="dropdown-menu">
-            <a href="community.html">Veterans & Outreach</a>
-            <a href="contact.html">Contact & Quotes</a>
-          </div>
-        </li>
+        <li><a href="community.html">Veterans & Outreach</a></li>
+        <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
+  </header>
 
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
+  <!-- MAIN CONTENT -->
+  <main class="page-wrapper">
+    <section style="margin: 2rem 0;">
+      <h1>Contact</h1>
+      <p>
+        Have a question, want a quote, or ready to get on the schedule?
+        Reach out using any option below.
+      </p>
+    </section>
 
-  <div id="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="community.html">Veterans & Outreach</a>
-    <a href="contact.html">Contact & Quotes</a>
-  </div>
-</header>
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h2>Call or Text</h2>
+        <p><strong>Phone:</strong> (682) 445-9951</p>
+        <p>Texting pictures of your gutters, junk, or project is the fastest way to get a quote.</p>
 
-<main>
-  <section>
-    <div class="section-inner contact-grid">
-      <div class="contact-panel">
-        <h1 class="section-title">Get Your Free Quote</h1>
-        <p class="section-tagline">Tell us what you need — we’ll respond as soon as possible.</p>
-
-        <p><strong>Phone:</strong> 682-445-9951</p>
-        <p><strong>Email:</strong> ramking0913@gmail.com</p>
-        <p><strong>Hours:</strong> Mon–Sat · 8 AM – 6 PM</p>
-        <p><strong>Service Area:</strong> Abilene, TX + surrounding towns</p>
-
-        <p style="margin-top:14px;font-size:0.9rem;color:#a7bccd;">
-          Prefer texting or sending photos of your gutters or roofline?  
-          You can text pictures to the number above and we’ll give you a more accurate quote.
-        </p>
+        <h2 style="margin-top: 1.5rem;">Service Area</h2>
+        <p>Based in Texas, serving nearby surrounding communities.</p>
       </div>
 
-      <div class="contact-form">
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
-
+      <div class="contact-card">
+        <h2>Contact Form</h2>
+        <!-- You can hook this up to Formspree or another service later -->
+        <form>
           <label for="name">Name</label>
-          <input id="name" type="text" name="name" required>
-
-          <label for="address">Address</label>
-          <input id="address" type="text" name="address" required>
+          <input id="name" type="text" placeholder="Your name" />
 
           <label for="phone">Phone</label>
-          <input id="phone" type="text" name="phone" required>
+          <input id="phone" type="tel" placeholder="Best number to reach you" />
 
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" required>
+          <label for="service">What do you need help with?</label>
+          <input id="service" type="text" placeholder="Gutter cleaning, lights, junk removal, etc." />
 
-          <label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="Gutter Cleaning">Gutter Cleaning</option>
-            <option value="Gutter Repairs">Gutter Repairs</option>
-            <option value="Gutter Guards">Gutter Guards</option>
-            <option value="Christmas Light Installation">Christmas Light Installation</option>
-            <option value="Other">Other</option>
-          </select>
+          <label for="message">Details</label>
+          <textarea id="message" rows="4" placeholder="Tell us about your home or project."></textarea>
 
-          <label for="message">Message / Notes</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:10px;">
-            Submit Request
-          </button>
+          <button type="button">Send (placeholder)</button>
         </form>
+        <p style="font-size: 0.8rem; color:#6b7280; margin-top:0.5rem;">
+          This form is a visual placeholder. When you’re ready, we can hook it up so it emails you directly.
+        </p>
       </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    © 2025 RM Gutters, LLC · Veteran Owned · Abilene, TX · Venmo: @rmgutters ·
-    Email: <a href="mailto:ramking0913@gmail.com">ramking0913@gmail.com</a> · Phone: 682-445-9951
-  </div>
-</footer>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  let menuOpen = false;
-
-  hamburger.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    mobileMenu.style.display = menuOpen ? 'block' : 'none';
-
-    if (menuOpen) {
-      hamburger.children[0].style.transform = "rotate(45deg) translateY(8px)";
-      hamburger.children[1].style.opacity = "0";
-      hamburger.children[2].style.transform = "rotate(-45deg) translateY(-8px)";
-    } else {
-      hamburger.children[0].style.transform = "none";
-      hamburger.children[1].style.opacity = "1";
-      hamburger.children[2].style.transform = "none";
-    }
-  });
-</script>
-
+    </section>
+  </main>
 </body>
 </html>
