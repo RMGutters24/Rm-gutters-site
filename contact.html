@@ -8,17 +8,29 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="nav-container">
-    <a href="index.html" class="logo">RM GUTTERS</a>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">RM GUTTERS</a>
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        onclick="document.body.classList.toggle('nav-open')">
+        ☰
+      </button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="community.html">Veterans & Outreach</a></li>
+          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <button class="nav-toggle" aria-label="Toggle navigation"
-      onclick="document.body.classList.toggle('nav-open')">
-      ☰
-    </button>
-
-    <nav class="main-nav">
-      <ul class="nav-links">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="pricing.html">Pricing</a></li>
@@ -29,93 +41,57 @@
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
-  <nav class="mobile-nav">
-    <ul class="mobile-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="community.html">Veterans & Outreach</a></li>
-      <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="page-wrapper">
+    <section class="section-card">
+      <h1>Contact RM Gutters</h1>
+      <p>Have a question, want a quote, or ready to get on the schedule? Reach out below.</p>
+    </section>
 
-<main class="page-wrapper">
+    <section class="contact-grid">
+      <div class="contact-card">
+        <h2>Call or Text</h2>
+        <p><strong>Phone:</strong> <a href="tel:16824459951">(682) 445-9951</a></p>
+        <p>Texting pictures of your gutters, junk, or project is the fastest way to get a quote.</p>
 
-  <section class="section-card">
-    <h1>Contact RM Gutters</h1>
-    <p>
-      Have a question, want a quote, or ready to get on the schedule?
-      Reach out using the form or contact details below.
-    </p>
-  </section>
+        <h2 style="margin-top:1.5rem;">Service Area</h2>
+        <p>Based in Texas, serving nearby surrounding communities.</p>
+      </div>
 
-  <section class="contact-grid">
+      <div class="contact-card">
+        <h2>Contact Form</h2>
 
-    <!-- LEFT CARD -->
-    <div class="contact-card">
-      <h2>Call or Text</h2>
-      <p>
-        <strong>Phone:</strong>
-        <a href="tel:16824459951">(682) 445-9951</a>
-      </p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
+          <input type="hidden" name="subject" value="New RM Gutters Website Lead">
+          <input type="checkbox" name="botcheck" style="display:none;">
 
-      <p>
-        📸 Texting photos of your gutters, junk, or project
-        is the fastest way to get a quote.
-      </p>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
 
-      <h2 style="margin-top:1.5rem;">Service Area</h2>
-      <p>
-        Based in Texas, serving surrounding communities.
-      </p>
-    </div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="Best number to reach you" required>
 
-    <!-- RIGHT CARD -->
-    <div class="contact-card">
-      <h2>Contact Form</h2>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Your email" required>
 
-      <form action="https://api.web3forms.com/submit" method="POST">
+          <label for="service">What do you need help with?</label>
+          <input id="service" name="service" type="text" placeholder="Gutter cleaning, lights, junk removal, etc." required>
 
-        <!-- Web3Forms Required -->
-        <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
-        <input type="hidden" name="subject" value="New RM Gutters Website Lead">
-        <input type="checkbox" name="botcheck" style="display:none;">
+          <label for="message">Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your home or project." required></textarea>
 
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your name" required>
+          <button type="submit">Send</button>
 
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" placeholder="Best number to reach you" required>
+          <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.6rem;">
+            Fastest quotes come from texting photos to (682) 445-9951.
+          </p>
+        </form>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="Your email" required>
-
-        <label for="service">What do you need help with?</label>
-        <input id="service" name="service" type="text"
-          placeholder="Gutter cleaning, lights, junk removal, etc." required>
-
-        <label for="message">Details</label>
-        <textarea id="message" name="message" rows="4"
-          placeholder="Tell us about your home or project." required></textarea>
-
-        <button type="submit">Send Message</button>
-
-        <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.6rem;">
-          We’ll respond ASAP. For fastest service, text photos to (682) 445-9951.
-        </p>
-
-      </form>
-    </div>
-
-  </section>
-
-</main>
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
