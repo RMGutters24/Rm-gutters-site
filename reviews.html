@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RM Gutters - Reviews</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RM Gutters - Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<nav>
-<div class="logo">RM Gutters</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
-<ul id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="reviews.html">Reviews</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+<nav class="navbar">
+  <div class="nav-logo">RM Gutters</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
-<div class="section">
-<h1>Customer Reviews</h1>
+<section class="section">
+  <h1>Our Services</h1>
 
-<div class="card">
-<strong>Sarah M.</strong>
-<p>★★★★★</p>
-<p>Very respectful and professional. Highly recommend!</p>
-</div>
-
-<div class="card">
-<strong>James R.</strong>
-<p>★★★★★</p>
-<p>Our roofline looked amazing. We'll be using RM Gutters every year.</p>
-</div>
-
-<div class="card">
-<strong>Amanda K.</strong>
-<p>★★★★★</p>
-<p>Honest pricing and easy to work with.</p>
-</div>
-</div>
+  <div class="card"><h3>Gutter Cleaning</h3><p>Debris removal + downspout flushing.</p></div>
+  <div class="card"><h3>Junk / Brush Removal</h3><p>Haul off and cleanup.</p></div>
+  <div class="card"><h3>Roofline / Exterior Cleanup</h3><p>Make your home look sharp again.</p></div>
+  <div class="card"><h3>Christmas Light Installation</h3><p>Holiday lighting done safely and professionally.</p></div>
+</section>
 
 <footer>
-<p>© <span id="year"></span> RM Gutters</p>
+  <h3>RM Gutters</h3>
+  <p>Professional Gutter Cleaning & Exterior Services</p>
+  <p>© <span id="year"></span> RM Gutters. All Rights Reserved.</p>
 </footer>
-
-<script>
-function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
 
 </body>
 </html>
