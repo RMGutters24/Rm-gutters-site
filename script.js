@@ -16,13 +16,13 @@
 
   toggleBtn.addEventListener("click", toggleNav);
 
-  // Close when clicking a link (mobile UX)
+  // Close when clicking a link (mobile)
   nav.addEventListener("click", (e) => {
     const link = e.target.closest("a");
     if (link) closeNav();
   });
 
-  // Close on Escape key
+  // Close on Escape
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeNav();
   });
