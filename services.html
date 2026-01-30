@@ -1,45 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RM Gutters - Services</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b14;
+  color: #ffffff;
+}
 
-<nav>
-<div class="logo">RM Gutters</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
-<ul id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="reviews.html">Reviews</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-<div class="section">
-<div class="card">
-<h1>Our Services</h1>
-<ul>
-<li>Gutter Cleaning</li>
-<li>Junk Removal</li>
-<li>Roofline Cleaning</li>
-<li>Christmas Lights Installation</li>
-<li>Exterior Cleanup</li>
-</ul>
-</div>
-</div>
+.card {
+  background: #0d1324;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
 
-<footer>
-<p>© <span id="year"></span> RM Gutters</p>
-</footer>
+.stars {
+  color: gold;
+}
 
-<script>
-function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #070b14;
+  border-bottom: 1px solid #1a2033;
+  position: relative;
+}
 
-</body>
-</html>
+.nav-logo {
+  color: #1fcad3;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-links li a:hover {
+  color: #1fcad3;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #1fcad3;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #070b14;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #1a2033;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #1a2033;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #070b14;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1a2033;
+}
+
+footer h3 {
+  color: #1fcad3;
+}
+
+footer p {
+  color: #b5b9c9;
+  font-size: 14px;
+}
