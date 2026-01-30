@@ -1,107 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | RM Gutters</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - RM Gutters</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b14;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #070b14;
+  border-bottom: 1px solid #1a2033;
+}
+
+nav .logo {
+  color: #1fcad3;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #1fcad3;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.service-box {
+  background: #0d1324;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #070b14;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1a2033;
+}
+
+footer h3 {
+  color: #1fcad3;
+}
+
+footer p {
+  color: #b5b9c9;
+  font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">RM GUTTERS</a>
-      <button class="nav-toggle" aria-label="Toggle navigation"
-        onclick="document.body.classList.toggle('nav-open')">
-        ☰
-      </button>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="community.html">Veterans & Outreach</a></li>
-          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <nav class="mobile-nav">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" aria-current="page">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="community.html">Veterans & Outreach</a></li>
-        <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<nav>
+  <div class="logo">RM Gutters</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <main class="page-wrapper">
-    <section class="section-card">
-      <h1>Our Services</h1>
-      <p>
-        RM Gutters provides professional gutter and exterior services with honest communication and transparent pricing.
-      </p>
-    </section>
+<section class="section">
+  <h2>Our Services</h2>
 
-    <section class="section-card">
-      <h2>Gutter Cleaning</h2>
-      <p>
-        Complete gutter and downspout cleaning, including removal of debris, flushing, and a quick visual inspection
-        for problem areas.
-      </p>
-    </section>
+  <div class="service-box">
+    <h3>Gutter Cleaning</h3>
+    <p>Complete debris removal and downspout flushing to protect your home.</p>
+  </div>
 
-    <section class="section-card">
-      <h2>Gutter Repairs</h2>
-      <p>
-        Minor leak repairs, resealing corners and joints, re-attaching loose sections, and improving drainage where possible.
-      </p>
-    </section>
+  <div class="service-box">
+    <h3>Gutter Installation</h3>
+    <p>New seamless gutter installs with quality materials.</p>
+  </div>
 
-    <section class="section-card">
-      <h2>Gutter Guard Installation</h2>
-      <p>
-        Keep your gutters cleaner longer with guard installation options. We’ll talk about what makes sense for your roofline
-        and budget.
-      </p>
-    </section>
+  <div class="service-box">
+    <h3>Christmas Light Installation</h3>
+    <p>Professional holiday lighting for rooflines and homes.</p>
+  </div>
 
-    <section class="section-card">
-      <h2>Holiday & Christmas Light Installation</h2>
-      <p>
-        Professional light hanging along the roofline, peaks, and trim. We also offer removal at a discounted rate after
-        the season.
-      </p>
-    </section>
+  <div class="service-box">
+    <h3>Junk & Brush Removal</h3>
+    <p>Haul off unwanted debris and yard waste.</p>
+  </div>
+</section>
 
-    <section class="section-card">
-      <h2>Junk Removal & Labor Help</h2>
-      <p>
-        Need an old couch gone, a pile of junk hauled off, or extra hands for moving and small projects?
-        We offer junk removal and labor-only help.
-      </p>
-      <p style="margin-top:0.5rem;">
-        <a href="junk-labor.html">See Junk Removal & Labor pricing →</a>
-      </p>
-    </section>
+<footer>
+  <h3>RM Gutters</h3>
+  <p>Professional Gutter Cleaning & Exterior Services</p>
+  <p>© <span id="year"></span> RM Gutters. All Rights Reserved.</p>
+</footer>
 
-    <section class="section-card">
-      <h2>Custom Requests</h2>
-      <p>
-        Have something a little different in mind? If it’s related to gutters, roofline, exterior clean-up, or light labor,
-        we’ll do our best to help.
-      </p>
-      <p style="margin-top:0.5rem;">
-        <a href="contact.html">Contact us to talk about your project →</a>
-      </p>
-    </section>
-  </main>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
