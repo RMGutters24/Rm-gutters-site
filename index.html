@@ -4,26 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RM Gutters | Veteran-Owned Gutter & Exterior Services</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=6" />
+  <script defer src="/script.js?v=6"></script>
 </head>
 <body>
 
   <header class="site-header">
     <div class="nav-container">
-      <a href="index.html" class="logo">RM GUTTERS</a>
+      <a href="/index.html" class="logo">RM GUTTERS</a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+        ☰
+      </button>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <nav class="main-nav" id="siteNav" aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="community.html">Veterans & Outreach</a></li>
-          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/index.html" aria-current="page">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/community.html">Veterans & Outreach</a></li>
+          <li><a href="/junk-labor.html">Junk Removal & Labor Help</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -44,8 +47,8 @@
         </p>
 
         <div style="margin-top:1.3rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
-          <a href="contact.html" class="button-primary">Get a Quote</a>
-          <a href="pricing.html" class="button-outline">View Pricing</a>
+          <a href="/contact.html" class="button-primary">Get a Quote</a>
+          <a href="/pricing.html" class="button-outline">View Pricing</a>
         </div>
       </div>
 
@@ -54,7 +57,7 @@
         <p style="font-size:0.95rem;">
           We offer junk removal and labor help for moving, clean-outs, and small projects.
         </p>
-        <a href="junk-labor.html" class="button-primary" style="margin-top:0.75rem;">
+        <a href="/junk-labor.html" class="button-primary" style="margin-top:0.75rem;">
           View Junk Removal & Labor Pricing
         </a>
         <p class="muted" style="margin-top:0.9rem; font-size:0.82rem;">
@@ -73,7 +76,7 @@
         <li><strong>New:</strong> Junk Removal & Labor-Only Help</li>
       </ul>
       <p style="margin-top:0.75rem;">
-        <a href="services.html">See all services →</a>
+        <a href="/services.html">See all services →</a>
       </p>
     </section>
 
@@ -84,7 +87,7 @@
         We believe hard work, honesty, and respect can change lives and communities.
       </p>
       <p style="margin-top:0.5rem;">
-        <a href="community.html">Learn more about our Veterans & Outreach mission →</a>
+        <a href="/community.html">Learn more about our Veterans & Outreach mission →</a>
       </p>
     </section>
   </main>
@@ -94,6 +97,5 @@
     <div>Call/Text: (682) 445-9951 • © 2026 RM Gutters</div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
