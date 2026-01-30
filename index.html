@@ -8,17 +8,13 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-container">
       <a href="index.html" class="logo">RM GUTTERS</a>
 
-      <button class="nav-toggle" aria-label="Toggle navigation"
-        onclick="document.body.classList.toggle('nav-open')">
-        ☰
-      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -31,24 +27,9 @@
         </ul>
       </nav>
     </div>
-
-    <nav class="mobile-nav">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="community.html">Veterans & Outreach</a></li>
-        <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- MAIN -->
   <main class="page-wrapper">
-
     <section class="hero">
       <div class="hero-main">
         <div class="hero-eyebrow">Veteran-Owned • Local • Honest</div>
@@ -69,16 +50,15 @@
       </div>
 
       <aside class="hero-side">
-        <h2>Need Junk Removal or Extra Hands?</h2>
+        <h2 style="margin:0 0 8px; color: var(--accent);">Need Junk Removal or Extra Hands?</h2>
         <p style="font-size:0.95rem;">
-          We now offer junk removal and labor help for moving, clean-outs, and small projects.
+          We offer junk removal and labor help for moving, clean-outs, and small projects.
         </p>
         <a href="junk-labor.html" class="button-primary" style="margin-top:0.75rem;">
           View Junk Removal & Labor Pricing
         </a>
-        <p style="margin-top:0.9rem; font-size:0.82rem; color:#e5e7eb;">
-          Text photos for a fast estimate:
-          <strong>(682) 445-9951</strong>
+        <p class="muted" style="margin-top:0.9rem; font-size:0.82rem;">
+          Text photos for a fast estimate: <strong>(682) 445-9951</strong>
         </p>
       </aside>
     </section>
@@ -107,7 +87,13 @@
         <a href="community.html">Learn more about our Veterans & Outreach mission →</a>
       </p>
     </section>
-
   </main>
+
+  <footer class="site-footer">
+    <div><strong>RM Gutters</strong> • Abilene & Surrounding Texas Communities</div>
+    <div>Call/Text: (682) 445-9951 • © 2026 RM Gutters</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
