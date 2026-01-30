@@ -1,74 +1,126 @@
-<div class="section-card" style="margin-top:16px;">
-  <h2 style="margin:0 0 10px;">Request a Quote</h2>
-  <p class="muted" style="margin:0 0 14px;">
-    Send a quick message and we’ll get back to you ASAP. For the fastest estimate, include your address + a couple photos.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RM Gutters | Contact</title>
 
-  <form action="https://api.web3forms.com/submit" method="POST" class="rm-form">
-    <!-- REQUIRED: Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="e09703fb-5485-489b-86b6-fc30e4db232f">
+  <link rel="stylesheet" href="/styles.css?v=10" />
+  <script defer src="/script.js?v=10"></script>
+</head>
+<body>
 
-    <!-- Recommended -->
-    <input type="hidden" name="subject" value="New Quote Request - RM Gutters">
-    <input type="hidden" name="from_name" value="RM Gutters Website">
-    <input type="hidden" name="replyto" value="%email%">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/index.html" class="logo">RM GUTTERS</a>
 
-    <!-- Optional: Redirect after submit -->
-    <!-- <input type="hidden" name="redirect" value="https://rmgutterstx.com/thanks.html"> -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+        ☰
+      </button>
 
-    <!-- Anti-spam honeypot -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-
-    <div class="form-grid">
-      <label>
-        Full Name
-        <input type="text" name="name" placeholder="Your name" required>
-      </label>
-
-      <label>
-        Phone
-        <input type="tel" name="phone" placeholder="(682) 445-9951" required>
-      </label>
-
-      <label class="span-2">
-        Email
-        <input type="email" name="email" placeholder="you@example.com" required>
-      </label>
-
-      <label class="span-2">
-        Address (optional but helps)
-        <input type="text" name="address" placeholder="Street, City">
-      </label>
-
-      <label class="span-2">
-        Service Needed
-        <select name="service">
-          <option value="Gutter Cleaning">Gutter Cleaning</option>
-          <option value="Gutter Repair / Reseal">Gutter Repair / Reseal</option>
-          <option value="Gutter Guards">Gutter Guards</option>
-          <option value="Holiday Lights">Holiday Lights</option>
-          <option value="Junk Removal">Junk Removal</option>
-          <option value="Labor Help">Labor Help</option>
-          <option value="Other">Other</option>
-        </select>
-      </label>
-
-      <label class="span-2">
-        Message
-        <textarea name="message" rows="6" placeholder="Tell us what you need + best day/time to reach you." required></textarea>
-      </label>
+      <nav class="main-nav" id="siteNav" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/community.html">Veterans & Outreach</a></li>
+          <li><a href="/junk-labor.html">Junk Removal & Labor Help</a></li>
+          <li><a href="/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Optional: turn on Web3Forms captcha -->
-    <input type="hidden" name="captcha" value="true">
+  <main class="page-wrapper">
+    <section class="section-card">
+      <h1 style="margin:0 0 8px;">Contact RM Gutters</h1>
+      <p class="muted" style="margin:0;">
+        Call/text for a fast quote. Or send a message below and we’ll get back to you ASAP.
+      </p>
 
-    <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-      <button type="submit" class="button-primary">Send Request</button>
-      <a class="button-outline" href="tel:16824459951">Or Call/Text Now</a>
-    </div>
+      <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button-primary" href="tel:16824459951">Call / Text: (682) 445-9951</a>
+        <a class="button-outline" href="mailto:rmgutters24@gmail.com">Email: rmgutters24@gmail.com</a>
+      </div>
 
-    <p class="muted" style="margin-top:10px; font-size:0.85rem;">
-      Tip: Texting photos to <strong>(682) 445-9951</strong> is the fastest way to get a quick estimate.
-    </p>
-  </form>
-</div>
+      <div class="section-card" style="margin-top:16px;">
+        <h2 style="margin:0 0 10px;">Request a Quote</h2>
+        <p class="muted" style="margin:0 0 14px;">
+          For the fastest estimate, include your address + a couple photos (or text them to us).
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="rm-form">
+          <input type="hidden" name="access_key" value="e09703fb-5485-489b-86b6-fc30e4db232f">
+          <input type="hidden" name="subject" value="New Quote Request - RM Gutters">
+          <input type="hidden" name="from_name" value="RM Gutters Website">
+          <input type="hidden" name="replyto" value="%email%">
+
+          <!-- Redirect after submit (optional) -->
+          <input type="hidden" name="redirect" value="https://rmgutterstx.com/thanks.html">
+
+          <!-- Anti-spam -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+          <input type="hidden" name="captcha" value="true">
+
+          <div class="form-grid">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="phone" placeholder="(682) 445-9951" required>
+            </label>
+
+            <label class="span-2">
+              Email
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+
+            <label class="span-2">
+              Address (optional but helps)
+              <input type="text" name="address" placeholder="Street, City">
+            </label>
+
+            <label class="span-2">
+              Service Needed
+              <select name="service">
+                <option value="Gutter Cleaning">Gutter Cleaning</option>
+                <option value="Gutter Repair / Reseal">Gutter Repair / Reseal</option>
+                <option value="Gutter Guards">Gutter Guards</option>
+                <option value="Holiday Lights">Holiday Lights</option>
+                <option value="Junk Removal">Junk Removal</option>
+                <option value="Labor Help">Labor Help</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <label class="span-2">
+              Message
+              <textarea name="message" rows="6" placeholder="Tell us what you need + best day/time to reach you." required></textarea>
+            </label>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button type="submit" class="button-primary">Send Request</button>
+            <a class="button-outline" href="tel:16824459951">Or Call/Text Now</a>
+          </div>
+
+          <p class="muted" style="margin-top:10px; font-size:0.85rem;">
+            Tip: Texting photos to <strong>(682) 445-9951</strong> is the fastest way to get a quick estimate.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>RM Gutters</strong> • Abilene & Surrounding Texas Communities</div>
+    <div>Call/Text: (682) 445-9951 • © 2026 RM Gutters</div>
+  </footer>
+
+</body>
+</html>
