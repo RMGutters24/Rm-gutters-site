@@ -9,11 +9,13 @@
   /* RM Gutters vibe */
   --accent: #00b8b8;
   --accent2: #35e6e6;
+
   --shadow: 0 18px 60px rgba(0,0,0,0.55);
 }
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -38,6 +40,7 @@ a:hover{ text-decoration:underline; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
+
 .nav-container{
   max-width: 1100px;
   margin: 0 auto;
@@ -46,7 +49,9 @@ a:hover{ text-decoration:underline; }
   align-items:center;
   justify-content:space-between;
   gap: 14px;
+  position: relative;
 }
+
 .logo{
   font-weight: 900;
   letter-spacing: 1px;
@@ -89,6 +94,7 @@ a:hover{ text-decoration:underline; }
   align-items:center;
   flex-wrap:wrap;
 }
+
 .main-nav a{
   display:inline-block;
   padding: 9px 12px;
@@ -128,6 +134,7 @@ a:hover{ text-decoration:underline; }
   box-shadow: var(--shadow);
   padding: 22px;
 }
+
 .hero-main{
   position:relative;
   overflow:hidden;
@@ -154,6 +161,7 @@ a:hover{ text-decoration:underline; }
   border-radius: 999px;
   margin-bottom: 12px;
 }
+
 .hero-main h1{
   margin: 6px 0 10px;
   font-size: clamp(2rem, 3.8vw, 3rem);
@@ -169,6 +177,9 @@ a:hover{ text-decoration:underline; }
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 18px 20px;
+}
+.section-card h1{
+  margin: 0 0 10px;
 }
 .section-card h2{
   margin: 0 0 10px;
@@ -190,7 +201,9 @@ a:hover{ text-decoration:underline; }
   letter-spacing: 0.2px;
   text-decoration:none;
   border: 1px solid transparent;
+  cursor: pointer;
 }
+
 .button-primary{
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   color: #001010;
@@ -200,6 +213,7 @@ a:hover{ text-decoration:underline; }
   filter: brightness(1.05);
   text-decoration:none;
 }
+
 .button-outline{
   background: rgba(255,255,255,0.04);
   border-color: rgba(0,184,184,0.45);
@@ -218,34 +232,7 @@ a:hover{ text-decoration:underline; }
   text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 860px){
-  .hero{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 760px){
-  .nav-toggle{ display:inline-flex; }
-  .main-nav{
-    position:absolute;
-    left: 0; right: 0;
-    top: 64px;
-    padding: 10px 14px 14px;
-    display:none;
-    background: rgba(7,11,20,0.95);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(10px);
-  }
-  .main-nav.is-open{ display:block; }
-  .main-nav .nav-links{
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-  .main-nav a{
-    width: 100%;
-  }
-}
-/* Form styling (Web3Forms) */
+/* Web3Forms / Contact Form */
 .rm-form input,
 .rm-form select,
 .rm-form textarea{
@@ -257,6 +244,7 @@ a:hover{ text-decoration:underline; }
   background: rgba(255,255,255,0.04);
   color: var(--text);
   outline: none;
+  font-size: 16px; /* prevents iOS zoom */
 }
 
 .rm-form input::placeholder,
@@ -283,10 +271,35 @@ a:hover{ text-decoration:underline; }
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-
 .form-grid .span-2{ grid-column: 1 / -1; }
 
+/* Responsive */
+@media (max-width: 860px){
+  .hero{ grid-template-columns: 1fr; }
+}
+
 @media (max-width: 760px){
+  .nav-toggle{ display:inline-flex; }
+
+  .main-nav{
+    position:absolute;
+    left: 0; right: 0;
+    top: 64px;
+    padding: 10px 14px 14px;
+    display:none;
+    background: rgba(7,11,20,0.95);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+  }
+  .main-nav.is-open{ display:block; }
+
+  .main-nav .nav-links{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .main-nav a{ width: 100%; }
+
   .form-grid{ grid-template-columns: 1fr; }
   .form-grid .span-2{ grid-column: auto; }
 }
