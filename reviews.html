@@ -1,87 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reviews | RM Gutters</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews - RM Gutters</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b14;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #070b14;
+  border-bottom: 1px solid #1a2033;
+}
+
+nav .logo {
+  color: #1fcad3;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #1fcad3;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.review {
+  background: #0d1324;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.stars {
+  color: gold;
+}
+
+footer {
+  background: #070b14;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1a2033;
+}
+
+footer h3 {
+  color: #1fcad3;
+}
+
+footer p {
+  color: #b5b9c9;
+  font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">RM GUTTERS</a>
-      <button class="nav-toggle" aria-label="Toggle navigation"
-        onclick="document.body.classList.toggle('nav-open')">
-        ☰
-      </button>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html" aria-current="page">Reviews</a></li>
-          <li><a href="community.html">Veterans & Outreach</a></li>
-          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <nav class="mobile-nav">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reviews.html" aria-current="page">Reviews</a></li>
-        <li><a href="community.html">Veterans & Outreach</a></li>
-        <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<nav>
+  <div class="logo">RM Gutters</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <main class="page-wrapper">
-    <section class="section-card">
-      <h1>Customer Reviews</h1>
-      <p>
-        Word of mouth means everything to us. Here’s what people are saying about RM Gutters.
-      </p>
-    </section>
+<section class="section">
+  <h2>Customer Reviews</h2>
 
-    <section>
-      <div class="review-card">
-        <div class="review-name">Sarah M.</div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">
-          “Showed up on time, cleaned all the gutters, and even walked me through what they found.
-          Very respectful and professional. Highly recommend!”
-        </p>
-      </div>
+  <div class="review">
+    <strong>Sarah M.</strong>
+    <div class="stars">★★★★★</div>
+    <p>Very respectful and professional. Highly recommend!</p>
+  </div>
 
-      <div class="review-card">
-        <div class="review-name">James R.</div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">
-          “Our roofline and Christmas lights looked amazing. We’ll be using RM Gutters every year now.”
-        </p>
-      </div>
+  <div class="review">
+    <strong>James R.</strong>
+    <div class="stars">★★★★★</div>
+    <p>Our roofline looked amazing. We’ll be using RM Gutters every year.</p>
+  </div>
 
-      <div class="review-card">
-        <div class="review-name">Amanda K.</div>
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">
-          “They cleaned the gutters and hauled off a pile of junk from the side of the house in one visit.
-          Honest, upfront pricing and easy to work with.”
-        </p>
-      </div>
+  <div class="review">
+    <strong>Amanda K.</strong>
+    <div class="stars">★★★★★</div>
+    <p>Honest pricing and easy to work with.</p>
+  </div>
+</section>
 
-      <p style="margin-top:1.3rem;font-size:0.88rem;color:#9ca3af;">
-        As you collect real reviews on Facebook or Google, you can swap these out for your real customer comments and
-        screenshots.
-      </p>
-    </section>
-  </main>
+<footer>
+  <h3>RM Gutters</h3>
+  <p>Professional Gutter Cleaning & Exterior Services</p>
+  <p>© <span id="year"></span> RM Gutters. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
