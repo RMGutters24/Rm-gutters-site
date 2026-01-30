@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | RM Gutters</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - RM Gutters</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b14;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #070b14;
+  border-bottom: 1px solid #1a2033;
+}
+
+nav .logo {
+  color: #1fcad3;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #1fcad3;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-box {
+  background: #0d1324;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+footer {
+  background: #070b14;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1a2033;
+}
+
+footer h3 {
+  color: #1fcad3;
+}
+
+footer p {
+  color: #b5b9c9;
+  font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">RM GUTTERS</a>
-      <button class="nav-toggle" aria-label="Toggle navigation"
-        onclick="document.body.classList.toggle('nav-open')">
-        ☰
-      </button>
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="community.html">Veterans & Outreach</a></li>
-          <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+<nav>
+  <div class="logo">RM Gutters</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <nav class="mobile-nav">
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="community.html">Veterans & Outreach</a></li>
-        <li><a href="junk-labor.html">Junk Removal & Labor Help</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="section">
+  <h2>Contact Us</h2>
 
-  <main class="page-wrapper">
-    <section class="section-card">
-      <h1>Contact RM Gutters</h1>
-      <p>Have a question, want a quote, or ready to get on the schedule? Reach out below.</p>
-    </section>
+  <div class="contact-box">
+    <p><strong>Phone:</strong> 682-445-9951</p>
+    <p><strong>Email:</strong> rmgutterstx@gmail.com</p>
+    <p>Call or text today for a free quote!</p>
+  </div>
+</section>
 
-    <section class="contact-grid">
-      <div class="contact-card">
-        <h2>Call or Text</h2>
-        <p><strong>Phone:</strong> <a href="tel:16824459951">(682) 445-9951</a></p>
-        <p>Texting pictures of your gutters, junk, or project is the fastest way to get a quote.</p>
+<footer>
+  <h3>RM Gutters</h3>
+  <p>Professional Gutter Cleaning & Exterior Services</p>
+  <p>© <span id="year"></span> RM Gutters. All Rights Reserved.</p>
+</footer>
 
-        <h2 style="margin-top:1.5rem;">Service Area</h2>
-        <p>Based in Texas, serving nearby surrounding communities.</p>
-      </div>
-
-      <div class="contact-card">
-        <h2>Contact Form</h2>
-
-<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-
-  <input type="hidden" name="access_key" value="6a47fd37-2520-451b-b46d-8705b9c82d77">
-  <input type="hidden" name="subject" value="New RM Gutters Website Lead">
-  <input type="checkbox" name="botcheck" style="display:none;">
-
-  <label for="name">Name</label>
-  <input id="name" name="name" type="text" placeholder="Your name" required>
-
-  <label for="phone">Phone</label>
-  <input id="phone" name="phone" type="tel" placeholder="Best number to reach you" required>
-
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" placeholder="Your email" required>
-
-  <label for="service">What do you need help with?</label>
-  <input id="service" name="service" type="text"
-         placeholder="Gutter cleaning, lights, junk removal, etc." required>
-
-  <label for="message">Details</label>
-  <textarea id="message" name="message" rows="4"
-            placeholder="Tell us about your home or project." required></textarea>
-
-  <button type="submit">Send</button>
-
-</form>
-
-      </div>
-    </section>
-  </main>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
