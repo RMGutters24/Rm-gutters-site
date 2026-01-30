@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reviews - RM Gutters</title>
+<title>RM Gutters</title>
 
 <style>
 body {
@@ -13,38 +13,76 @@ body {
   color: white;
 }
 
-nav {
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
   background: #070b14;
   border-bottom: 1px solid #1a2033;
+  position: relative;
 }
 
-nav .logo {
+.nav-logo {
   color: #1fcad3;
   font-size: 22px;
   font-weight: bold;
 }
 
-nav ul {
+#nav-links {
   list-style: none;
   display: flex;
   gap: 15px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
+#nav-links li a {
   color: white;
   text-decoration: none;
 }
 
-nav ul li a:hover {
+#nav-links li a:hover {
   color: #1fcad3;
 }
 
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #1fcad3;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #070b14;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #1a2033;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #1a2033;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* CONTENT */
 .section {
   max-width: 1000px;
   margin: 40px auto;
@@ -62,6 +100,7 @@ nav ul li a:hover {
   color: gold;
 }
 
+/* FOOTER */
 footer {
   background: #070b14;
   padding: 30px 20px;
@@ -82,9 +121,13 @@ footer p {
 
 <body>
 
-<nav>
-  <div class="logo">RM Gutters</div>
-  <ul>
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-logo">RM Gutters</div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="reviews.html">Reviews</a></li>
@@ -92,28 +135,30 @@ footer p {
   </ul>
 </nav>
 
+<!-- CONTENT -->
 <section class="section">
-  <h2>Customer Reviews</h2>
+  <h2>What People Are Saying</h2>
 
   <div class="review">
     <strong>Sarah M.</strong>
     <div class="stars">★★★★★</div>
-    <p>Very respectful and professional. Highly recommend!</p>
+    <p>Showed up on time, cleaned all the gutters, and walked me through what they found. Highly recommend!</p>
   </div>
 
   <div class="review">
     <strong>James R.</strong>
     <div class="stars">★★★★★</div>
-    <p>Our roofline looked amazing. We’ll be using RM Gutters every year.</p>
+    <p>Our roofline and Christmas lights looked amazing. We'll be using RM Gutters every year.</p>
   </div>
 
   <div class="review">
     <strong>Amanda K.</strong>
     <div class="stars">★★★★★</div>
-    <p>Honest pricing and easy to work with.</p>
+    <p>They cleaned the gutters and hauled off junk in one visit. Honest pricing and easy to work with.</p>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <h3>RM Gutters</h3>
   <p>Professional Gutter Cleaning & Exterior Services</p>
@@ -121,6 +166,10 @@ footer p {
 </footer>
 
 <script>
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("show");
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
