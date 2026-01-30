@@ -1,86 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - RM Gutters</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #070b14;
-  color: white;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #070b14;
-  border-bottom: 1px solid #1a2033;
-}
-
-nav .logo {
-  color: #1fcad3;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #1fcad3;
-}
-
-.section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.contact-box {
-  background: #0d1324;
-  padding: 25px;
-  border-radius: 12px;
-}
-
-footer {
-  background: #070b14;
-  padding: 30px 20px;
-  text-align: center;
-  border-top: 1px solid #1a2033;
-}
-
-footer h3 {
-  color: #1fcad3;
-}
-
-footer p {
-  color: #b5b9c9;
-  font-size: 14px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RM Gutters - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">RM Gutters</div>
-  <ul>
+<nav class="navbar">
+  <div class="nav-logo">RM Gutters</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="reviews.html">Reviews</a></li>
@@ -89,9 +21,9 @@ footer p {
 </nav>
 
 <section class="section">
-  <h2>Contact Us</h2>
+  <h1>Contact Us</h1>
 
-  <div class="contact-box">
+  <div class="card">
     <p><strong>Phone:</strong> 682-445-9951</p>
     <p><strong>Email:</strong> rmgutters24@gmail.com</p>
     <p>Call or text today for a free quote!</p>
@@ -103,10 +35,6 @@ footer p {
   <p>Professional Gutter Cleaning & Exterior Services</p>
   <p>© <span id="year"></span> RM Gutters. All Rights Reserved.</p>
 </footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
