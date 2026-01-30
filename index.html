@@ -1,120 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RM Gutters</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RM Gutters</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #070b14;
-      color: #ffffff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070b14;
+  color: white;
+}
 
-    header {
-      padding: 20px;
-      text-align: center;
-      background: #070b14;
-      border-bottom: 1px solid #1a2033;
-    }
+/* NAV BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #070b14;
+  border-bottom: 1px solid #1a2033;
+}
 
-    header h1 {
-      margin: 0;
-      color: #1fcad3;
-      font-size: 28px;
-      letter-spacing: 2px;
-    }
+nav .logo {
+  color: #1fcad3;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    .section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
 
-    .section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 24px;
-    }
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    .review {
-      background: #0d1324;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
+nav ul li a:hover {
+  color: #1fcad3;
+}
 
-    .review-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+/* CONTENT */
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    .stars {
-      color: gold;
-      margin-bottom: 10px;
-    }
+.review {
+  background: #0d1324;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
 
-    footer {
-      background: #070b14;
-      padding: 40px 20px;
-      text-align: center;
-      border-top: 1px solid #1a2033;
-    }
+.stars {
+  color: gold;
+}
 
-    footer h3 {
-      color: #1fcad3;
-      margin-bottom: 10px;
-    }
+/* FOOTER */
+footer {
+  background: #070b14;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #1a2033;
+}
 
-    footer p {
-      color: #b5b9c9;
-      font-size: 14px;
-      margin: 6px 0;
-    }
-  </style>
+footer h3 {
+  color: #1fcad3;
+}
+
+footer p {
+  color: #b5b9c9;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>RM GUTTERS</h1>
-</header>
+<!-- NAV -->
+<nav>
+  <div class="logo">RM Gutters</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
+<!-- CONTENT -->
 <section class="section">
   <h2>What People Are Saying</h2>
 
   <div class="review">
-    <div class="review-name">Sarah M.</div>
+    <strong>Sarah M.</strong>
     <div class="stars">★★★★★</div>
-    <p>
-      Showed up on time, cleaned all the gutters, and walked me through what they found.
-      Very respectful and professional. Highly recommend!
-    </p>
+    <p>Showed up on time, cleaned all the gutters, and walked me through what they found. Highly recommend!</p>
   </div>
 
   <div class="review">
-    <div class="review-name">James R.</div>
+    <strong>James R.</strong>
     <div class="stars">★★★★★</div>
-    <p>
-      Our roofline and Christmas lights looked amazing.
-      We'll be using RM Gutters every year now.
-    </p>
+    <p>Our roofline and Christmas lights looked amazing. We'll be using RM Gutters every year.</p>
   </div>
 
   <div class="review">
-    <div class="review-name">Amanda K.</div>
+    <strong>Amanda K.</strong>
     <div class="stars">★★★★★</div>
-    <p>
-      They cleaned the gutters and hauled off junk in one visit.
-      Honest pricing and easy to work with.
-    </p>
+    <p>They cleaned the gutters and hauled off junk in one visit. Honest pricing and easy to work with.</p>
   </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
   <h3>RM Gutters</h3>
   <p>Professional Gutter Cleaning & Exterior Services</p>
@@ -122,7 +129,7 @@
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
